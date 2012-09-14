@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:icon="@drawable/about"
+		  android:id="@+id/About"
+		  android:title="About">
+	</item>
+	
+	<item android:icon="@drawable/help"
+		  android:id="@+id/Help"
+		  android:title="Help">
+	</item>
+
+	<item android:icon="@drawable/icon_new"
+		  android:id="@+id/New"
+		  android:title="What's New">
+	</item>
+		
+</menu>
