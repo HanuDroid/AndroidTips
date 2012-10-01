@@ -11,6 +11,7 @@ import org.varunverma.hanu.Application.HanuGestureListener;
 import org.varunverma.hanu.Application.Post;
 import org.varunverma.hanu.Application.Tracker;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -27,10 +28,12 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 
+@SuppressLint("SetJavaScriptEnabled")
 public class Main extends Activity implements Invoker, HanuGestureListener {
 
 	private Application app;
@@ -42,6 +45,7 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
 	List<Post> postList;
 	private boolean appClosing;
 	private AdView adView;
+	private String taxonomy, name;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -85,9 +89,7 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
         if(app.isThisFirstUse()){
         	// This is the first run ! 
         	
-        	String message = "Please wait while the application is initialized for first usage..." +
-        			"\n" +
-        			"This may take a couple of minutes depending upon your internet connection.";
+        	String message = "Please wait while the application is initialized for first usage...";
     		dialog = ProgressDialog.show(Main.this, "", message, true);
     		app.initializeAppForFirstUse(this);
     		firstUse = true;
@@ -139,11 +141,7 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
     		break;
     		
     	case R.id.Help:
-    		Tracker.getInstance().trackPageView("/Help");
-    		Intent help = new Intent(Main.this, DisplayFile.class);
-			help.putExtra("File", "help.html");
-			help.putExtra("Title", "Help: ");
-			Main.this.startActivity(help);
+    		showHelp();
     		break;
     		
     	case R.id.About:
@@ -159,6 +157,15 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
     	return true;
     }
     
+	private void showHelp() {
+		// Show Help
+		Tracker.getInstance().trackPageView("/Help");
+		Intent help = new Intent(Main.this, DisplayFile.class);
+		help.putExtra("File", "help.html");
+		help.putExtra("Title", "Help: ");
+		Main.this.startActivity(help);
+	}
+
 	private void startMainScreen() {
 
 		showWhatsNew();
@@ -173,7 +180,7 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
 		wv.setBackgroundColor(0);
 		
 		postList = app.getAllPosts();
-		
+		    
 		showPost(position);
 		
 		// Fling handling
@@ -201,7 +208,8 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
 			Log.e(Application.TAG, e.getMessage(), e);
 		}
 		
-		if(newAppVersion == 1){
+		if(app.isThisFirstUse()){
+			showHelp();
 			return;
 		}
 		
@@ -226,7 +234,7 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
 		}
 		
 		Post post = postList.get(pos);
-		
+		Tracker.getInstance().trackPageView("/PostTitle/" + post.getTitle());
 		wv.loadDataWithBaseURL("fake://not/needed", post.getHTMLCode(), "text/html", "UTF-8", "");
 		
 	}
@@ -256,18 +264,16 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
 					.show();
 			}
 			
-			Log.e(Application.TAG, result.getErrorMessage(), result.getException());
-			/*	No need to show in real app..
 			Toast.makeText(getApplicationContext(), result.getErrorMessage(), Toast.LENGTH_LONG).show();
-			//*/
 		}
 		
 		if(firstUse){
 			
-			dialog.dismiss();
-			
-			// Start Main Activity.
-			startMainScreen();
+			if(dialog.isShowing()){
+				
+				dialog.dismiss();
+				startMainScreen();	// Start Main Activity.
+			}
 		}		
 	}
 	
@@ -283,7 +289,21 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
 
 	@Override
 	public void ProgressUpdate(ProgressInfo progress) {
-		// Nothing to do !
+		// Show UI.
+		if(progress.getProgressMessage().contentEquals("Show UI")){
+			
+			if(dialog.isShowing()){
+				
+				dialog.dismiss();
+				startMainScreen();	// Start Main Activity.
+			}
+		}
+		
+		// Update UI.
+		if(progress.getProgressMessage().contentEquals("Update UI")){
+			loadPostsByCategory();
+		}
+		
 	}
 
 	public void swipeRight() {
@@ -320,22 +340,32 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
 		// Nothing
 	}
 	
+	private void loadPostsByCategory(){
+		
+		if(taxonomy == null){
+			postList = app.getAllPosts();
+			return;
+		}
+		
+		if(taxonomy.contentEquals("category")){
+			postList = app.getPostsByCategory(name);
+		}
+		else if(taxonomy.contentEquals("post_tag")){
+			postList = app.getPostsByTag(name);
+		}
+		else if(taxonomy.contentEquals("author")){
+			postList = app.getPostsByAuthor(name);
+		}
+		
+	}
+	
 	class PostJavaScriptInterface{
 		
-		public void loadPosts(String taxonomy, String name){
-			
-			Tracker.getInstance().trackEvent("Clicks", "Hyperlink", taxonomy, 1);
-			
-			if(taxonomy.contentEquals("category")){
-				postList = app.getPostsByCategory(name);
-			}
-			else if(taxonomy.contentEquals("post_tag")){
-				postList = app.getPostsByTag(name);
-			}
-			else if(taxonomy.contentEquals("author")){
-				postList = app.getPostsByAuthor(name);
-			}
-			
+		public void loadPosts(String t, String n){
+			taxonomy = t;
+			name = n;
+			Tracker.getInstance().trackEvent("Clicks", taxonomy, name, 1);
+			loadPostsByCategory();
 			position = 0;
 			showPost(position);
 		}
