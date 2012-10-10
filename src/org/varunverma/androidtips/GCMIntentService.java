@@ -1,5 +1,6 @@
 package org.varunverma.androidtips;
 
+import org.varunverma.CommandExecuter.ResultObject;
 import org.varunverma.hanu.Application.HanuGCMIntentService;
 
 import android.app.Notification;
@@ -18,8 +19,12 @@ public class GCMIntentService extends HanuGCMIntentService {
 
 	@Override
 	protected void onMessage(Context context, Intent intent) {
-		super.onMessage(context, intent);
-		createNotification();
+		
+		ResultObject result = processMessage(context,intent);
+		
+		if(result.isCommandExecutionSuccess() && result.getResultCode() == 200){
+			createNotification();
+		}
 	}
 
 	@Override

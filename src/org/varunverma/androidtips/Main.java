@@ -79,6 +79,8 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
         app.registerAppForGCM();
         
         AdRequest adRequest = new AdRequest();
+        adRequest.addTestDevice(AdRequest.TEST_EMULATOR);
+        adRequest.addTestDevice("E16F3DE5DF824FE222EDDA27A63E2F8A");
         
         adView = (AdView) findViewById(R.id.adView);
         
