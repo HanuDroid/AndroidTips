@@ -18,6 +18,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -81,7 +82,7 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
         AdRequest adRequest = new AdRequest();
         adRequest.addTestDevice(AdRequest.TEST_EMULATOR);
         adRequest.addTestDevice("E16F3DE5DF824FE222EDDA27A63E2F8A");
-        
+                
         adView = (AdView) findViewById(R.id.adView);
         
         // Start loading the ad in the background.
@@ -134,12 +135,11 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
     	
     	switch (item.getItemId()){
     	
-    	case R.id.New:
-    		Tracker.getInstance().trackPageView("/NewFeatures");
-    		Intent newFeatures = new Intent(Main.this, DisplayFile.class);
-    		newFeatures.putExtra("File", "NewFeatures.html");
-    		newFeatures.putExtra("Title", "New Features: ");
-			Main.this.startActivity(newFeatures);
+    	case R.id.Rate:
+    		Tracker.getInstance().trackPageView("/Rating");
+    		Intent rate = new Intent(Main.this, PostRating.class);
+    		rate.putExtra("PostId", position);
+			Main.this.startActivity(rate);
     		break;
     		
     	case R.id.Help:
@@ -308,6 +308,13 @@ public class Main extends Activity implements Invoker, HanuGestureListener {
 		
 	}
 
+	@Override
+	public void onConfigurationChanged(final Configuration newConfig)
+	{
+	    // Ignore orientation change to keep activity from restarting
+	    super.onConfigurationChanged(newConfig);
+	}
+	
 	public void swipeRight() {
 		// Show previous
 		if(position == 0){

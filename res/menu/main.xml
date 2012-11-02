@@ -6,14 +6,14 @@
 		  android:title="About">
 	</item>
 	
+	<item android:icon="@drawable/rating"
+		  android:id="@+id/Rate"
+		  android:title="Rate this tip">
+	</item>
+	
 	<item android:icon="@drawable/help"
 		  android:id="@+id/Help"
 		  android:title="Help">
-	</item>
-
-	<item android:icon="@drawable/icon_new"
-		  android:id="@+id/New"
-		  android:title="What's New">
 	</item>
 		
 </menu>
