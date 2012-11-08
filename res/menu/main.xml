@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-	<item android:icon="@drawable/about"
-		  android:id="@+id/About"
-		  android:title="About">
-	</item>
-	
 	<item android:icon="@drawable/rating"
 		  android:id="@+id/Rate"
+		  android:showAsAction="ifRoom"
 		  android:title="Rate this tip">
 	</item>
 	
 	<item android:icon="@drawable/help"
 		  android:id="@+id/Help"
+		  android:showAsAction="ifRoom"
 		  android:title="Help">
 	</item>
-		
+
+	<item android:icon="@drawable/about"
+		  android:id="@+id/About"
+		  android:showAsAction="ifRoom"
+		  android:title="About">
+	</item>
+			
 </menu>
