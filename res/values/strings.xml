@@ -7,11 +7,11 @@
 	
     <string name="title_color">blue</string>
     <string name="title_font">arial,helvetica,sans-serif</string>
-    <string name="pub_date_color">white</string>
+    <string name="pub_date_color">black</string>
     <string name="pub_date_font">verdana,geneva,sans-serif</string>
     <string name="content_color">black</string>
     <string name="content_font">arial,helvetica,sans-serif</string>
-    <string name="taxonomy_color">white</string>
+    <string name="taxonomy_color">black</string>
     <string name="taxonomy_font">arial,helvetica,sans-serif</string>
     
 </resources>
