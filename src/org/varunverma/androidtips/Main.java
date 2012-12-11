@@ -19,7 +19,6 @@ import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.analytics.tracking.android.EasyTracker;
 
@@ -295,7 +294,7 @@ public class Main extends FragmentActivity implements PostListFragment.Callbacks
 					.show();
 			}
 			
-			Toast.makeText(getApplicationContext(), result.getErrorMessage(), Toast.LENGTH_LONG).show();
+			//Toast.makeText(getApplicationContext(), result.getErrorMessage(), Toast.LENGTH_LONG).show();
 		}
 		
 		if(firstUse){

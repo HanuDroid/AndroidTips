@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.varunverma.androidtips"
     android:installLocation="preferExternal"
-    android:versionCode="14"
-    android:versionName="2.4" >
+    android:versionCode="15"
+    android:versionName="2.4.1" >
 
 	<uses-sdk android:minSdkVersion="8"
         android:targetSdkVersion="16" />
