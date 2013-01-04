@@ -37,6 +37,10 @@ public class PostRating extends Activity implements OnRatingBarChangeListener {
         	finish();
         }
         
+        if(post == null){
+        	finish();
+        }
+        
         setTitle("Rate this post:");
 		
         ratingBar = (RatingBar) findViewById(R.id.ratingbar);

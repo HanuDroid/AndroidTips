@@ -2,6 +2,8 @@
 
     <string name="app_name">Android Tips</string>
     <string name="title_activity_main">Android Tips</string>
+    <string name="search_hint">Search for Android Tips</string>
+    <string name="search">Search Android Tips and Tricks</string>
     <string name="BlogURL">http://hanu-droid.varunverma.org/Applications/AndroidTips</string>
     <string name="GoogleAnalyticsPropertyId" tools:ignore="TypographyDashes">UA-34707924-2</string>
 	

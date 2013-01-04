@@ -7,11 +7,15 @@ import org.varunverma.hanu.Application.Application;
 import org.varunverma.hanu.Application.HanuFragmentInterface;
 import org.varunverma.hanu.Application.Post;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -19,6 +23,7 @@ import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SearchView;
 
 import com.google.analytics.tracking.android.EasyTracker;
 
@@ -172,9 +177,19 @@ public class Main extends FragmentActivity implements PostListFragment.Callbacks
 		Main.this.startActivity(help);
 	}
 
+	@SuppressLint("NewApi")
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
+		
         getMenuInflater().inflate(R.menu.main, menu);
+        
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB){
+            SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+            SearchView searchView = (SearchView) menu.findItem(R.id.Search).getActionView();
+            searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+            searchView.setIconifiedByDefault(false);
+        }
+        
         return true;
     }
     
@@ -225,6 +240,10 @@ public class Main extends FragmentActivity implements PostListFragment.Callbacks
     		rate.putExtra("PostId", fragmentUI.getSelectedItem());
 			Main.this.startActivity(rate);
     		break;
+    		
+    	case R.id.Search:
+    		onSearchRequested();
+            return true;
     		    		
     	case R.id.Help:
     		showHelp();
@@ -236,7 +255,7 @@ public class Main extends FragmentActivity implements PostListFragment.Callbacks
     		Intent send = new Intent(android.content.Intent.ACTION_SEND);
     		send.setType("text/plain");
     		send.putExtra(android.content.Intent.EXTRA_SUBJECT, post.getTitle());
-    		send.putExtra(android.content.Intent.EXTRA_TEXT, post.getContent());
+    		send.putExtra(android.content.Intent.EXTRA_TEXT, post.getContent(true));
     		startActivity(Intent.createChooser(send, "Share with..."));
     		break;
     		
