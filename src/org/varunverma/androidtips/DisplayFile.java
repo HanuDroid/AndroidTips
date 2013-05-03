@@ -39,8 +39,23 @@ public class DisplayFile extends Activity {
         this.setTitle(title);
         
        	String fileName = getIntent().getStringExtra("File");
-       	showFromRawSource(fileName);
-		
+       	
+       	if(fileName != null){
+       		// If File name was provided, show from file name.
+       		getHTMLFromFile(fileName);
+       	}
+       	else{
+       		// Else, show data directly.
+       		String subject = getIntent().getStringExtra("Subject");
+       		String content = getIntent().getStringExtra("Content");
+       		html_text = "<html><body>" +
+       				"<h3>" + subject + "</h3>" +
+       				"<p>" + content + "</p>" +
+       				"</body></html>";
+       	}
+       	
+       	showFromRawSource();
+       			
 	}
 
 	@Override
@@ -50,9 +65,9 @@ public class DisplayFile extends Activity {
 	    super.onConfigurationChanged(newConfig);
 	}
 
-	private void showFromRawSource(String fileName) {
+	private void showFromRawSource() {
 		// Show from a RAW Source
-        getHTMLFromFile(fileName);
+		my_web_view.clearCache(true);
         my_web_view.setBackgroundColor(0);
         my_web_view.loadData(html_text, "text/html", "utf-8");
 	}

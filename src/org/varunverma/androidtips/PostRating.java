@@ -10,6 +10,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.RatingBar;
 import android.widget.RatingBar.OnRatingBarChangeListener;
 
@@ -32,22 +33,23 @@ public class PostRating extends Activity implements OnRatingBarChangeListener {
         int postId = intent.getIntExtra("PostId", 0);
         
         try{
-        	post = Application.getApplicationInstance().getAllPosts().get(postId);
+        	post = Application.getApplicationInstance().getPostList().get(postId);
         }catch (Exception e){
+        	Log.e(Application.TAG, e.getMessage(), e);
         	finish();
         }
         
         if(post == null){
         	finish();
         }
-        
-        setTitle("Rate this post:");
-		
-        ratingBar = (RatingBar) findViewById(R.id.ratingbar);
-        ratingBar.setNumStars(5);
-        ratingBar.setRating(post.getMyRating());
-        ratingBar.setOnRatingBarChangeListener(this);
-        
+        else{
+        	setTitle("Rate this post:");
+    		
+            ratingBar = (RatingBar) findViewById(R.id.ratingbar);
+            ratingBar.setNumStars(5);
+            ratingBar.setRating(post.getMyRating());
+            ratingBar.setOnRatingBarChangeListener(this);
+        }
 	}
 	
 	@Override
