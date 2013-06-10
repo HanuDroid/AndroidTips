@@ -12,6 +12,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -95,6 +96,7 @@ public class DisplayFile extends Activity {
 
 	class FileJavaScriptInterface{
 		
+		@JavascriptInterface
 		public void buttonClick(String buttonName){
 			
 			if(buttonName.contentEquals("accept")){

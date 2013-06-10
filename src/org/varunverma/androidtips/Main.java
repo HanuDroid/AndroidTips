@@ -68,7 +68,7 @@ public class Main extends FragmentActivity implements PostListFragment.Callbacks
         app.setContext(getApplicationContext());
 
         // Accept my Terms
-        app.setEULAResult(true);
+        //app.setEULAResult(true);
         if(!app.isEULAAccepted()){
         	// Show EULA.
         	Intent eula = new Intent(Main.this, DisplayFile.class);
