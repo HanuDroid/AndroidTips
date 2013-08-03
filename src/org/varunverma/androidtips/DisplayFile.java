@@ -25,9 +25,10 @@ public class DisplayFile extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);       
-        setContentView(R.layout.info);
+        setContentView(R.layout.post_detail);
         
-        my_web_view = (WebView) findViewById(R.id.info);
+        my_web_view = (WebView) findViewById(R.id.webview);
+        my_web_view.setBackground(getResources().getDrawable(R.drawable.background));
         WebSettings webSettings = my_web_view.getSettings();
 		webSettings.setJavaScriptEnabled(true);
 		my_web_view.addJavascriptInterface(new FileJavaScriptInterface(), "File");
