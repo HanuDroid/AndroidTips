@@ -10,6 +10,7 @@ import org.varunverma.hanu.Application.Application;
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
@@ -21,6 +22,7 @@ public class DisplayFile extends Activity {
 	private String html_text;
 	private WebView my_web_view;
 	
+	@SuppressWarnings("deprecation")
 	@Override
     public void onCreate(Bundle savedInstanceState) {
 		
@@ -28,7 +30,14 @@ public class DisplayFile extends Activity {
         setContentView(R.layout.post_detail);
         
         my_web_view = (WebView) findViewById(R.id.webview);
-        my_web_view.setBackground(getResources().getDrawable(R.drawable.background));
+        
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN){
+        	my_web_view.setBackground(getResources().getDrawable(R.drawable.background));
+        }
+        else{
+        	my_web_view.setBackgroundDrawable(getResources().getDrawable(R.drawable.background));
+        }
+
         WebSettings webSettings = my_web_view.getSettings();
 		webSettings.setJavaScriptEnabled(true);
 		my_web_view.addJavascriptInterface(new FileJavaScriptInterface(), "File");
