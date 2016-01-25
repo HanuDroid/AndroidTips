@@ -6,12 +6,12 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager.NameNotFoundException;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -29,7 +29,7 @@ import org.varunverma.hanu.Application.Application;
 import org.varunverma.hanu.Application.HanuFragmentInterface;
 import org.varunverma.hanu.Application.Post;
 
-public class Main extends FragmentActivity implements PostListFragment.Callbacks,
+public class Main extends AppCompatActivity implements PostListFragment.Callbacks,
 												PostDetailFragment.Callbacks {
 
 	private boolean dualPane;
@@ -47,7 +47,10 @@ public class Main extends FragmentActivity implements PostListFragment.Callbacks
         
     	super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        
+
+		Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+		setSupportActionBar(myToolbar);
+
         if(savedInstanceState != null){
         	postId = savedInstanceState.getInt("PostId");
         }
@@ -203,13 +206,11 @@ public class Main extends FragmentActivity implements PostListFragment.Callbacks
 		
         getMenuInflater().inflate(R.menu.main, menu);
         
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB){
-            SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-            SearchView searchView = (SearchView) menu.findItem(R.id.Search).getActionView();
-			searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-			searchView.setIconifiedByDefault(false);
-        }
-        
+		SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+		SearchView searchView = (SearchView) menu.findItem(R.id.Search).getActionView();
+		searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+		searchView.setIconifiedByDefault(false);
+
         return true;
     }
     

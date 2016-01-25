@@ -3,13 +3,16 @@ package org.varunverma.androidtips;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-public class PostDetailActivity extends FragmentActivity implements
+public class PostDetailActivity extends AppCompatActivity implements
 		PostDetailFragment.Callbacks {
 
 	@Override
@@ -17,6 +20,15 @@ public class PostDetailActivity extends FragmentActivity implements
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.info);
+
+		Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+		setSupportActionBar(myToolbar);
+
+		// Get a support ActionBar corresponding to this toolbar
+		ActionBar ab = getSupportActionBar();
+
+		// Enable the Up button
+		ab.setDisplayHomeAsUpEnabled(true);
 
 		// Show Ad.
 		AdRequest adRequest = new AdRequest.Builder()
@@ -42,6 +54,21 @@ public class PostDetailActivity extends FragmentActivity implements
 
 		fm.beginTransaction().replace(R.id.post_detail, fragment)
 				.commitAllowingStateLoss();
+
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		switch (item.getItemId()) {
+
+			case android.R.id.home:
+				finish();
+				return true;
+
+			default:
+				return super.onOptionsItemSelected(item);
+		}
 
 	}
 

@@ -1,23 +1,26 @@
 package org.varunverma.androidtips;
 
 import android.annotation.SuppressLint;
-import android.app.ActionBar;
 import android.app.SearchManager;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.SearchRecentSuggestions;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import org.varunverma.hanu.Application.Application;
 import org.varunverma.hanu.Application.HanuFragmentInterface;
 
-public class Search extends FragmentActivity implements PostListFragment.Callbacks, 
+public class Search extends AppCompatActivity implements PostListFragment.Callbacks,
 												PostDetailFragment.Callbacks {
 
 	private boolean dualPane;
@@ -31,6 +34,19 @@ public class Search extends FragmentActivity implements PostListFragment.Callbac
         
     	super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+		Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+		setSupportActionBar(myToolbar);
+
+		// Show Ad.
+		AdRequest adRequest = new AdRequest.Builder()
+				.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+				.addTestDevice("9F11CAC92EB404500CAA3F8B0BBA5277").build();
+
+		AdView adView = (AdView) findViewById(R.id.adView);
+
+		// Start loading the ad in the background.
+		adView.loadAd(adRequest);
         
         if(savedInstanceState != null){
         	postId = savedInstanceState.getInt("PostId");
@@ -53,13 +69,13 @@ public class Search extends FragmentActivity implements PostListFragment.Callbac
         
         // Set the context of the application
         app.setContext(getApplicationContext());
-        
-        // Enable app icon as back button
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB){
-        	ActionBar actionBar = getActionBar();
-        	actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-        
+
+		// Get a support ActionBar corresponding to this toolbar
+		ActionBar ab = getSupportActionBar();
+
+		// Enable the Up button
+		ab.setDisplayHomeAsUpEnabled(true);
+
 		// Load Posts  that match search criteria !!
         // Get the intent, verify the action and get the query
         Intent intent = getIntent();

@@ -8,8 +8,8 @@ android {
         applicationId "org.varunverma.androidtips"
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 30
-        versionName "3.0"
+        versionCode 31
+        versionName "3.0.1"
     }
 
     buildTypes {

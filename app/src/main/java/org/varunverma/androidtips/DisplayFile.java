@@ -1,23 +1,25 @@
 package org.varunverma.androidtips;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
-import org.varunverma.hanu.Application.Application;
-
-import android.app.Activity;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-public class DisplayFile extends Activity {
+import org.varunverma.hanu.Application.Application;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+public class DisplayFile extends AppCompatActivity {
 	
 	private String html_text;
 	private WebView my_web_view;
@@ -27,7 +29,16 @@ public class DisplayFile extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);       
-        setContentView(R.layout.post_detail);
+        setContentView(R.layout.display_file);
+
+		Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+		setSupportActionBar(myToolbar);
+
+		// Get a support ActionBar corresponding to this toolbar
+		ActionBar ab = getSupportActionBar();
+
+		// Enable the Up button
+		ab.setDisplayHomeAsUpEnabled(true);
         
         my_web_view = (WebView) findViewById(R.id.webview);
         
