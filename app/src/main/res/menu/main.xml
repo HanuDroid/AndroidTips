@@ -5,32 +5,32 @@
 
     <item
         android:id="@+id/Share"
-        android:icon="@drawable/share"
+        android:icon="@mipmap/share"
         app:showAsAction="ifRoom"
         android:title="Share">
     </item>
     <item
         android:id="@+id/Search"
         android:title="Search"
-        android:icon="@drawable/search"
+        android:icon="@mipmap/search"
         app:showAsAction="ifRoom|collapseActionView"
         app:actionViewClass="android.widget.SearchView" >
     </item>   
     <item
         android:id="@+id/Rate"
-        android:icon="@drawable/rating"
+        android:icon="@mipmap/rating"
         app:showAsAction="ifRoom"
         android:title="Rate this tip">
     </item>
     <item
         android:id="@+id/Help"
-        android:icon="@drawable/help"
+        android:icon="@mipmap/help"
         app:showAsAction="ifRoom"
         android:title="Help">
     </item>
     <item
         android:id="@+id/About"
-        android:icon="@drawable/about"
+        android:icon="@mipmap/about"
         app:showAsAction="ifRoom"
         android:title="About">
     </item>

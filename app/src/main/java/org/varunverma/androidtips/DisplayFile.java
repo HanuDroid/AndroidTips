@@ -12,7 +12,7 @@ import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-import org.varunverma.hanu.Application.Application;
+import com.ayansh.hanudroid.Application;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -43,10 +43,10 @@ public class DisplayFile extends AppCompatActivity {
         my_web_view = (WebView) findViewById(R.id.webview);
         
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN){
-        	my_web_view.setBackground(getResources().getDrawable(R.drawable.background));
+        	my_web_view.setBackground(getResources().getDrawable(R.mipmap.background));
         }
         else{
-        	my_web_view.setBackgroundDrawable(getResources().getDrawable(R.drawable.background));
+        	my_web_view.setBackgroundDrawable(getResources().getDrawable(R.mipmap.background));
         }
 
         WebSettings webSettings = my_web_view.getSettings();

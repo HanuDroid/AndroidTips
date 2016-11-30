@@ -11,8 +11,8 @@ import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-import org.varunverma.hanu.Application.Application;
-import org.varunverma.hanu.Application.Post;
+import com.ayansh.hanudroid.Application;
+import com.ayansh.hanudroid.Post;
 
 public class PostDetailFragment extends Fragment{
 

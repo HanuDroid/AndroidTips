@@ -22,12 +22,11 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 
+import com.ayansh.hanudroid.Application;
+import com.ayansh.hanudroid.HanuFragmentInterface;
+import com.ayansh.hanudroid.Post;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-
-import org.varunverma.hanu.Application.Application;
-import org.varunverma.hanu.Application.HanuFragmentInterface;
-import org.varunverma.hanu.Application.Post;
 
 public class Main extends AppCompatActivity implements PostListFragment.Callbacks,
 												PostDetailFragment.Callbacks {
