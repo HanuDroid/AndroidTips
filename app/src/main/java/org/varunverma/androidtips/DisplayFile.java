@@ -13,6 +13,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.ayansh.hanudroid.Application;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,6 +24,7 @@ public class DisplayFile extends AppCompatActivity {
 	
 	private String html_text;
 	private WebView my_web_view;
+	private boolean show_ad = false;
 	
 	@SuppressWarnings("deprecation")
 	@Override
@@ -65,6 +67,10 @@ public class DisplayFile extends AppCompatActivity {
        	if(fileName != null){
        		// If File name was provided, show from file name.
        		getHTMLFromFile(fileName);
+
+			if(fileName.contains("about")){
+				show_ad = true;
+			}
        	}
        	else{
        		// Else, show data directly.
@@ -78,6 +84,24 @@ public class DisplayFile extends AppCompatActivity {
        	
        	showFromRawSource();
        			
+	}
+
+	@Override
+	protected void onDestroy(){
+
+		if(show_ad){
+			showInterstitialAd();
+		}
+
+		super.onDestroy();
+	}
+
+	private void showInterstitialAd(){
+
+		InterstitialAd iad = MyInterstitialAd.getInterstitialAd(this);
+		if(iad.isLoaded()){
+			iad.show();
+		}
 	}
 
 	@Override
