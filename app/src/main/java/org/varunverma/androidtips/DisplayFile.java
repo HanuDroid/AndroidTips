@@ -43,7 +43,7 @@ public class DisplayFile extends AppCompatActivity {
 		ab.setDisplayHomeAsUpEnabled(true);
         
         my_web_view = (WebView) findViewById(R.id.webview);
-        
+
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN){
         	my_web_view.setBackground(getResources().getDrawable(R.mipmap.background));
         }

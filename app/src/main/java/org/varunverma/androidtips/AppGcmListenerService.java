@@ -6,7 +6,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat;
 
 import com.ayansh.CommandExecuter.ResultObject;
 import com.ayansh.hanudroid.Application;
@@ -35,7 +35,7 @@ public class AppGcmListenerService extends HanuFCMMessagingService {
 
 			ResultObject result = processMessage(remoteMessage);
 			if (result.getData().getBoolean("ShowNotification")) {
-				createNotification(result);
+				notifyNewContent(result);
 			}
 		}
 
@@ -66,7 +66,7 @@ public class AppGcmListenerService extends HanuFCMMessagingService {
 
 		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
 
-		Notification notification = new NotificationCompat.Builder(this)
+		Notification notification = new NotificationCompat.Builder(this, "INFO_MESSAGE")
 				.setContentTitle(subject)
 				.setContentText(content)
 				.setSmallIcon(R.mipmap.ic_launcher)
@@ -83,7 +83,7 @@ public class AppGcmListenerService extends HanuFCMMessagingService {
 		nm.notify(id, notification);
 	}
 
-	private void createNotification(ResultObject result) {
+	private void notifyNewContent(ResultObject result) {
 		// Create Notification
 
 		ArrayList<String> postTitleList = result.getData().getStringArrayList("PostTitle");
@@ -112,7 +112,7 @@ public class AppGcmListenerService extends HanuFCMMessagingService {
 			inboxStyle.addLine(i.next());
 		}
 
-		Notification notification = new NotificationCompat.Builder(this)
+		Notification notification = new NotificationCompat.Builder(this, "NEW_CONTENT")
 				.setContentTitle(title)
 				.setContentText(text)
 				.setContentInfo(String.valueOf(postsDownloaded))
