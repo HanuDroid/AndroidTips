@@ -4,35 +4,11 @@
     tools:context=".Main">
 
     <item
-        android:id="@+id/Share"
-        android:icon="@mipmap/share"
-        app:showAsAction="ifRoom"
-        android:title="Share">
-    </item>
-    <item
         android:id="@+id/Search"
         android:title="Search"
-        android:icon="@mipmap/search"
+        android:icon="@drawable/ic_search"
         app:showAsAction="ifRoom|collapseActionView"
         app:actionViewClass="android.widget.SearchView" >
-    </item>   
-    <item
-        android:id="@+id/Rate"
-        android:icon="@mipmap/rating"
-        app:showAsAction="ifRoom"
-        android:title="Rate this tip">
-    </item>
-    <item
-        android:id="@+id/Help"
-        android:icon="@mipmap/help"
-        app:showAsAction="ifRoom"
-        android:title="Help">
-    </item>
-    <item
-        android:id="@+id/About"
-        android:icon="@mipmap/about"
-        app:showAsAction="ifRoom"
-        android:title="About">
     </item>
 
 </menu>

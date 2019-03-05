@@ -1,47 +1,37 @@
 package org.varunverma.androidtips;
 
-import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager.NameNotFoundException;
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.ayansh.hanudroid.Application;
-import com.ayansh.hanudroid.HanuFragmentInterface;
-import com.ayansh.hanudroid.Post;
 import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
-public class Main extends AppCompatActivity implements PostListFragment.Callbacks,
-												PostDetailFragment.Callbacks {
+public class Main extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-	private boolean dualPane;
 	private Application app;
-	private ProgressDialog dialog;
-	private boolean firstUse;
-	private boolean appClosing;
-	private HanuFragmentInterface fragmentUI;
-	private int postId;
+	private int postIndex;
 	private PostPagerAdapter pagerAdapter;
 	private ViewPager viewPager;
+	private DrawerLayout mDrawerLayout;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,79 +39,37 @@ public class Main extends AppCompatActivity implements PostListFragment.Callback
     	super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-		MobileAds.initialize(this, "ca-app-pub-4571712644338430~3762977902");
+		mDrawerLayout = findViewById(R.id.drawer_layout);
+
+		NavigationView navigationView = findViewById(R.id.nav_view);
+		navigationView.setCheckedItem(R.id.AllPosts);
+		navigationView.setNavigationItemSelectedListener(this);
+		//navigationView.setItemIconTintList(null);
 
 		Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
 		setSupportActionBar(myToolbar);
+		ActionBar actionbar = getSupportActionBar();
+		actionbar.setDisplayHomeAsUpEnabled(true);
+		actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
-        if(savedInstanceState != null){
-        	postId = savedInstanceState.getInt("PostId");
+		// Get Application Instance.
+		app = Application.getApplicationInstance();
+		app.setContext(this);
+
+		if(savedInstanceState != null){
+        	postIndex = savedInstanceState.getInt("PostIndex");
         }
         else{
-        	postId = 0;
-        }
-        
-        if (findViewById(R.id.post_list) != null) {
-            dualPane = true;
-        }
-		else{
-			dualPane = false;
-			FrameLayout postDetail = (FrameLayout) findViewById(R.id.post_detail);
-	        if(postDetail != null){
-	        	postDetail.setVisibility(View.GONE);
-	        }
+        	postIndex = 0;
+			// Load Posts.
+			app.getAllPosts();
 		}
-
-        // Get Application Instance.
-        app = Application.getApplicationInstance();
 
 		// Start the Main Activity
 		startMainScreen();
-
-		// Show Swipe Help
-		showSwipeHelp();
-
     }
 
-	private void showSwipeHelp(){
-
-		final LinearLayout swipeHelpLayout = (LinearLayout) findViewById(R.id.swipe_help);
-
-		if(swipeHelpLayout == null){
-			return;
-		}
-
-		String swipeHelp = app.getOptions().get("SwipeHelp");
-
-		if(swipeHelp != null && swipeHelp.contentEquals("Skip")){
-			// Skip the swipe help
-			swipeHelpLayout.setVisibility(View.GONE);
-		}
-		else{
-
-			final CheckBox showHelpAgain = (CheckBox) swipeHelpLayout.findViewById(R.id.show_again);
-
-			Button dismissHelp = (Button) swipeHelpLayout.findViewById(R.id.dismiss_help);
-			dismissHelp.setOnClickListener(new View.OnClickListener() {
-
-				@Override
-				public void onClick(View view) {
-					// Hide the swipe help
-					swipeHelpLayout.setVisibility(View.GONE);
-
-					if(showHelpAgain.isChecked()){
-						Application.getApplicationInstance().addParameter("SwipeHelp", "Skip");
-					}
-				}
-			});
-
-		}
-
-	}
-
 	private void startMainScreen() {
-
-		showWhatsNew();
 
 		// Show Ad.
 		Bundle extras = new Bundle();
@@ -140,77 +88,18 @@ public class Main extends AppCompatActivity implements PostListFragment.Callback
 		MyInterstitialAd.getInterstitialAd(this);
 		MyInterstitialAd.requestNewInterstitial();
 
-		// Load Posts.
-		Application.getApplicationInstance().getAllPosts();
+		// Create view Pager
+		viewPager = (ViewPager) findViewById(R.id.post_pager);
 
-		// Create the Fragment.
-		FragmentManager fm = this.getSupportFragmentManager();
-		Fragment fragment;
+		viewPager.setClipToPadding(false);
+		viewPager.setPageMargin(-50);
 
-		if (dualPane) {
-			// Create Post List Fragment
-			fragment = new PostListFragment();
-			Bundle arguments = new Bundle();
-			arguments.putInt("PostId", postId);
-			fragment.setArguments(arguments);
-			fm.beginTransaction().replace(R.id.post_list, fragment).commitAllowingStateLoss();
-			
-			fragmentUI = (HanuFragmentInterface) fragment;
-			
-		} else {
-			
-			// Create view Pager
-			viewPager = (ViewPager) findViewById(R.id.post_pager);
-			
-			pagerAdapter = new PostPagerAdapter(getSupportFragmentManager(), app.getPostList().size());
-			viewPager.setAdapter(pagerAdapter);
-			
-		}
+		pagerAdapter = new PostPagerAdapter(getSupportFragmentManager(),app.getPostList().size());
+		viewPager.setAdapter(pagerAdapter);
+		viewPager.setCurrentItem(postIndex);
 	
 	}
 
-	private void showWhatsNew() {
-		// Show what's new in this version.
-		int oldFrameworkVersion = app.getOldFrameworkVersion();
-		int newFrameworkVersion = app.getNewFrameworkVersion();
-		
-		int oldAppVersion = app.getOldAppVersion();
-		int newAppVersion;
-		try {
-			newAppVersion = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
-		} catch (NameNotFoundException e) {
-			newAppVersion = 0;
-			Log.e(Application.TAG, e.getMessage(), e);
-		}
-		
-		if(app.isThisFirstUse()){
-			showHelp();
-			return;
-		}
-		
-		if(newAppVersion > oldAppVersion ||
-			newFrameworkVersion > oldFrameworkVersion){
-			
-			app.updateVersion();
-			
-			Intent info = new Intent(Main.this, DisplayFile.class);
-			info.putExtra("File", "NewFeatures.html");
-			info.putExtra("Title", "What's New?");
-			Main.this.startActivity(info);
-			
-		}
-		
-	}
-
-	private void showHelp() {
-		// Show Help
-		Intent help = new Intent(Main.this, DisplayFile.class);
-		help.putExtra("File", "help.html");
-		help.putExtra("Title", "Help: ");
-		Main.this.startActivity(help);
-	}
-
-	@SuppressLint("NewApi")
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
 		
@@ -223,130 +112,104 @@ public class Main extends AppCompatActivity implements PostListFragment.Callback
 
         return true;
     }
-    
-	@Override
-	public void onItemSelected(int id) {
-		
-		if (dualPane) {
-            Bundle arguments = new Bundle();
-            arguments.putInt("PostId", id);
-            PostDetailFragment fragment = new PostDetailFragment();
-            fragment.setArguments(arguments);
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.post_detail, fragment)
-                    .commit();
 
-        }
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		switch (item.getItemId()){
+
+			case android.R.id.home:
+				mDrawerLayout.openDrawer(GravityCompat.START);
+				break;
+
+			case R.id.Search:
+				onSearchRequested();
+				return true;
+
+		}
+
+		return true;
 	}
 
 	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-		if(fragmentUI != null && dualPane){
-			outState.putInt("PostId", fragmentUI.getSelectedItem());
-		}
-		else if(!dualPane && viewPager != null){
-			outState.putInt("PostId", viewPager.getCurrentItem());
-		}
+	public void onSaveInstanceState(Bundle savedInstanceState) {
+
+		savedInstanceState.putInt("PostIndex", viewPager.getCurrentItem());
+		super.onSaveInstanceState(savedInstanceState);
+
 	}
-	
+
 	@Override
 	protected void onDestroy(){
-		appClosing = true;
 		app.close();
 		super.onDestroy();
 	}
 
-    @Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-    	
-    	int id;
-    	
-    	switch (item.getItemId()){
-    	
-    	case R.id.Rate:
-    		
-    		if(dualPane){
-    			id = fragmentUI.getSelectedItem();
-    		}
-    		else{
-    			id = viewPager.getCurrentItem();
-    		}
-    		Intent rate = new Intent(Main.this, PostRating.class);
-    		rate.putExtra("PostId", id);
-			Main.this.startActivity(rate);
-    		break;
-    		
-    	case R.id.Search:
-    		onSearchRequested();
-            return true;
-    		    		
-    	case R.id.Help:
-    		showHelp();
-    		break;
-    		
-    	case R.id.Share:
-    		try{
-        		if(dualPane){
-        			id = fragmentUI.getSelectedItem();
-        		}
-        		else{
-        			id = viewPager.getCurrentItem();
-        		}
-    			Post post = app.getPostList().get(id);
-        		Intent send = new Intent(android.content.Intent.ACTION_SEND);
-        		send.setType("text/plain");
-        		send.putExtra(android.content.Intent.EXTRA_SUBJECT, post.getTitle());
-        		send.putExtra(android.content.Intent.EXTRA_TEXT, post.getContent(true));
-        		startActivity(Intent.createChooser(send, "Share with..."));
-    		}catch(Exception e){
-    			Log.e(Application.TAG, e.getMessage(), e);
-    			finish();
-    		}
-    		break;
-    		
-    	case R.id.About:
-    		Intent info = new Intent(Main.this, DisplayFile.class);
-			info.putExtra("File", "about.html");
-			info.putExtra("Title", "About: ");
-			Main.this.startActivity(info);
-    		break;
-    	
-    	}
-    	
-    	return true;
-    }
-        
 	@Override
-	public void loadPostsByCategory(String taxonomy, String name) {
-		
-		if(taxonomy.contentEquals("category")){
-			app.getPostsByCategory(name);
+	public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+		//menuItem.setChecked(true);
+		mDrawerLayout.closeDrawers();
+
+		switch (menuItem.getItemId()){
+
+			case R.id.AllPosts:
+				// Load Posts.
+				Application.getApplicationInstance().getAllPosts();
+				setTitle(R.string.app_name);
+				updateUI();
+				break;
+
+			case R.id.MyFavs:
+				// Load Posts.
+				app.getFavouritePosts();
+				setTitle("Favourite Tips");
+				updateUI();
+				break;
+
+			case R.id.Help:
+				Intent help = new Intent(Main.this, DisplayFile.class);
+				help.putExtra("ContentType", "File");
+				help.putExtra("File", "help.html");
+				help.putExtra("Title", "Help: ");
+				Main.this.startActivity(help);
+				break;
+
+			case R.id.ShowEula:
+				Intent eula = new Intent(Main.this, DisplayFile.class);
+				eula.putExtra("ContentType", "File");
+				eula.putExtra("File", "eula.html");
+				eula.putExtra("Title", "Terms and Conditions: ");
+				Main.this.startActivity(eula);
+				break;
+
+			case R.id.About:
+				Intent info = new Intent(Main.this, DisplayFile.class);
+				info.putExtra("ContentType", "File");
+				info.putExtra("File", "about.html");
+				info.putExtra("Title", "About: ");
+				Main.this.startActivity(info);
+				break;
+
+			case R.id.MyApps:
+				Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Ayansh+TechnoSoft+Pvt.+Ltd"));
+				startActivity(browserIntent);
+				break;
 		}
-		else if(taxonomy.contentEquals("post_tag")){
-			app.getPostsByTag(name);
-		}
-		else if(taxonomy.contentEquals("author")){
-			app.getPostsByAuthor(name);
-		}
-		
-		this.runOnUiThread(new Runnable() {
-		    public void run(){
-		    	if(dualPane){
-		    		fragmentUI.reloadUI();
-		    	}
-		    	else{
-		    		pagerAdapter.setNewSize(app.getPostList().size());
-		    		pagerAdapter.notifyDataSetChanged();
-		    		viewPager.setCurrentItem(0);
-		    	}
-		    }
-		});
-	}
-	
-	@Override
-	public boolean isDualPane(){
-		return dualPane;
+
+		return true;
 	}
 
+	private void updateUI(){
+
+		pagerAdapter.setNewSize(app.getPostList().size());
+		pagerAdapter.notifyDataSetChanged();
+		viewPager.setAdapter(pagerAdapter);
+		if(app.getPostList().size() < 1){
+			// Show warning
+			Toast toast = Toast.makeText(this,"Posts for selected criteria not found",Toast.LENGTH_LONG);
+			toast.setGravity(Gravity.CENTER,0,0);
+			toast.show();
+		}
+	}
 }

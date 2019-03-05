@@ -59,6 +59,7 @@ public class AppGcmListenerService extends HanuFCMMessagingService {
 		// Create Intent and Set Extras
 		Intent notificationIntent = new Intent(this, DisplayFile.class);
 
+		notificationIntent.putExtra("ContentType", "Notification");
 		notificationIntent.putExtra("Title", "Info:");
 		notificationIntent.putExtra("Subject", subject);
 		notificationIntent.putExtra("Content", content);
@@ -100,7 +101,7 @@ public class AppGcmListenerService extends HanuFCMMessagingService {
 			title = postsDownloaded + " new tips have been downloaded";
 		}
 
-		Intent notificationIntent = new Intent(this, Main.class);
+		Intent notificationIntent = new Intent(this, SplashScreen.class);
 		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
 
 		NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();

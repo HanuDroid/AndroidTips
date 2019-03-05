@@ -1,7 +1,9 @@
 package org.varunverma.androidtips;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -25,8 +27,8 @@ public class DisplayFile extends AppCompatActivity {
 	private String html_text;
 	private WebView my_web_view;
 	private boolean show_ad = false;
+	private String contentType = "";
 	
-	@SuppressWarnings("deprecation")
 	@Override
     public void onCreate(Bundle savedInstanceState) {
 		
@@ -43,45 +45,56 @@ public class DisplayFile extends AppCompatActivity {
 		ab.setDisplayHomeAsUpEnabled(true);
         
         my_web_view = (WebView) findViewById(R.id.webview);
+       	my_web_view.setBackground(getResources().getDrawable(R.mipmap.background));
+		my_web_view.setBackgroundColor(Color.TRANSPARENT);
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN){
-        	my_web_view.setBackground(getResources().getDrawable(R.mipmap.background));
-        }
-        else{
-        	my_web_view.setBackgroundDrawable(getResources().getDrawable(R.mipmap.background));
-        }
-
-        WebSettings webSettings = my_web_view.getSettings();
+		WebSettings webSettings = my_web_view.getSettings();
 		webSettings.setJavaScriptEnabled(true);
-		my_web_view.addJavascriptInterface(new FileJavaScriptInterface(), "File");
-                      
-        String title = this.getIntent().getStringExtra("Title");
-        if(title == null || title.contentEquals("")){
-        	title = getResources().getString(R.string.app_name);
-        }
-        
-        this.setTitle(title);
-        
-       	String fileName = getIntent().getStringExtra("File");
-       	
-       	if(fileName != null){
-       		// If File name was provided, show from file name.
-       		getHTMLFromFile(fileName);
+
+        // Get the Intent.
+		Intent intent = getIntent();
+
+		String title = intent.getStringExtra("Title");
+		if(title == null || title.contentEquals("")){
+			title = getResources().getString(R.string.app_name);
+		}
+
+		contentType = intent.getStringExtra("ContentType");
+		if(contentType.contentEquals("Post")){
+
+			my_web_view.setBackgroundColor(Color.parseColor("#757575"));
+			String postContent = intent.getStringExtra("PostContent");
+			html_text = postContent;
+		}
+		else if(contentType.contentEquals("File")){
+
+			String fileName = getIntent().getStringExtra("File");
+			getHTMLFromFile(fileName);
 
 			if(fileName.contains("about")){
 				show_ad = true;
 			}
-       	}
-       	else{
-       		// Else, show data directly.
-       		String subject = getIntent().getStringExtra("Subject");
-       		String content = getIntent().getStringExtra("Content");
-       		html_text = "<html><body>" +
-       				"<h3>" + subject + "</h3>" +
-       				"<p>" + content + "</p>" +
-       				"</body></html>";
-       	}
-       	
+
+		}
+		else if(contentType.contentEquals("Notification")){
+
+			String subject = getIntent().getStringExtra("Subject");
+			String content = getIntent().getStringExtra("Content");
+			html_text = "<html><body>" +
+					"<h3>" + subject + "</h3>" +
+					"<p>" + content + "</p>" +
+					"</body></html>";
+		}
+		else{
+
+			html_text = "<html><body>" +
+					"<h3>(c) Ayansh TechnoSoft</h3>" +
+					"<p>No Content</p>" +
+					"</body></html>";
+		}
+        
+        this.setTitle(title);
+
        	showFromRawSource();
        			
 	}
@@ -113,9 +126,8 @@ public class DisplayFile extends AppCompatActivity {
 
 	private void showFromRawSource() {
 		// Show from a RAW Source
-		my_web_view.clearCache(true);
-        my_web_view.setBackgroundColor(0);
-        my_web_view.loadData(html_text, "text/html", "utf-8");
+		//my_web_view.clearCache(true);
+        my_web_view.loadDataWithBaseURL("fake://not/needed", html_text, "text/html", "UTF-8", "");
 	}
 
 	private void getHTMLFromFile(String fileName) {
@@ -137,24 +149,5 @@ public class DisplayFile extends AppCompatActivity {
 		} catch (IOException e) {
 			Log.e(Application.TAG, e.getMessage(), e);
 		}
-	}
-
-	class FileJavaScriptInterface{
-		
-		@JavascriptInterface
-		public void buttonClick(String buttonName){
-			
-			if(buttonName.contentEquals("accept")){
-				Application.getApplicationInstance().setEULAResult(true);
-			}
-			else if(buttonName.contentEquals("reject")){
-				Application.getApplicationInstance().setEULAResult(false);
-			}
-			
-			setResult(RESULT_OK);       
-			finish();
-			
-		}
-		
 	}
 }

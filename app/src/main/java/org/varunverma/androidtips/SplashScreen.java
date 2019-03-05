@@ -14,12 +14,14 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.TextView;
 
+import com.ayansh.CommandExecuter.Command;
 import com.ayansh.CommandExecuter.CommandExecuter;
 import com.ayansh.CommandExecuter.Invoker;
 import com.ayansh.CommandExecuter.ProgressInfo;
 import com.ayansh.CommandExecuter.ResultObject;
 import com.ayansh.hanudroid.Application;
 import com.ayansh.hanudroid.SaveRegIdCommand;
+import com.google.android.gms.ads.MobileAds;
 
 public class SplashScreen extends Activity implements Invoker {
 	
@@ -46,12 +48,10 @@ public class SplashScreen extends Activity implements Invoker {
 		// Accept my Terms
         //app.setEULAResult(true);
 		if (!app.isEULAAccepted()) {
-			
-			Intent eula = new Intent(SplashScreen.this, DisplayFile.class);
-        	eula.putExtra("File", "eula.html");
-			eula.putExtra("Title", "End User License Aggrement: ");
+
+			Intent eula = new Intent(SplashScreen.this, Eula.class);
 			SplashScreen.this.startActivityForResult(eula, Application.EULA);
-			
+
 		} else {
 			// Start the Main Activity
 			startMainActivity();
@@ -71,6 +71,8 @@ public class SplashScreen extends Activity implements Invoker {
 	
 	private void startMainActivity() {
 
+		MobileAds.initialize(this, "ca-app-pub-4571712644338430~3762977902");
+
 		// Register application.
 		String regStatus = (String) app.getOptions().get("RegistrationStatus");
 		String regId = (String) app.getOptions().get("RegistrationId");
@@ -80,15 +82,7 @@ public class SplashScreen extends Activity implements Invoker {
 			if(regStatus == null || regStatus.contentEquals("")) {
 
 				CommandExecuter ce = new CommandExecuter();
-
-				SaveRegIdCommand command = new SaveRegIdCommand(new Invoker() {
-					public void NotifyCommandExecuted(ResultObject result) {
-					}
-
-					public void ProgressUpdate(ProgressInfo pi) {
-					}
-				}, regId);
-
+				SaveRegIdCommand command = new SaveRegIdCommand(Command.DUMMY_CALLER, regId);
 				ce.execute(command);
 
 			}
@@ -102,6 +96,9 @@ public class SplashScreen extends Activity implements Invoker {
 
 			statusView.setText("Initializing app for first use.\nPlease wait, this may take a while");
 			app.initializeAppForFirstUse(this);
+
+			// Set default options
+			setDefaultOptions();
 
 			// Create Notification Channels
 			createNotificationChannels();
@@ -217,15 +214,21 @@ public class SplashScreen extends Activity implements Invoker {
 	private void showHelp() {
 		
 		Intent help = new Intent(SplashScreen.this, DisplayFile.class);
+		help.putExtra("ContentType", "File");
 		help.putExtra("File", "help.html");
 		help.putExtra("Title", "Help: ");
 		SplashScreen.this.startActivityForResult(help, 900);
 		
 	}
 
+	private void setDefaultOptions(){
+		app.addParameter("DownloadImages","");
+	}
+
 	private void showWhatsNew() {
 		
 		Intent newFeatures = new Intent(SplashScreen.this, DisplayFile.class);
+		newFeatures.putExtra("ContentType", "File");
 		newFeatures.putExtra("File", "NewFeatures.html");
 		newFeatures.putExtra("Title", "New Features: ");
 		SplashScreen.this.startActivityForResult(newFeatures, 901);

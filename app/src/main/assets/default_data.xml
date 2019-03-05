@@ -1,1509 +1,392 @@
 <?xml version="1.0"?>
 <PostInfo>
-<PostsInfoRow>
-<PostData 
-Id="215"
-PublishDate="2012-12-09 18:12:13"
-Author="mastram"
-ModifiedDate="2012-12-09 18:14:38"
->
-<PostTitle>Tip#55 - Taking a screen shot</PostTitle>
-</PostData>
-<PostContent><![CDATA[Taking a screen shot is very easy on Android. However, its not same on all Android devices :(<br />
-<br />
-To take a screen shot:<br />
-<ul><br />
-	<li>Press the home button and power button at the same time. - This trick works on most of the mobiles</li><br />
-	<li><strong>Galaxy Nexus</strong>: Press the power button and the volume down button at the same time.</li><br />
-	<li><strong>Droid Razr MAXX</strong>: Press and hold both the power key and down volume key for three seconds, or until you hear the camera shutter click.</li><br />
-	<li><strong>Galaxy Note 2 / S3</strong>: Swipe your palm on the screen to take a screen shot.<br />
-<strong>Note</strong>: This trick works only on Jelly Bean (Android version 4.1)</li><br />
-</ul>]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="215"
-MetaKey="ratings_users"
-MetaValue="25"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="215"
-MetaKey="ratings_score"
-MetaValue="101.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="215"
-MetaKey="ratings_average"
-MetaValue="4.06"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="215"
-Taxonomy="category"
->
-<TermName>Shortcuts</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="201"
-PublishDate="2012-11-19 18:27:14"
-Author="mastram"
-ModifiedDate="2012-11-19 18:27:57"
->
-<PostTitle>Tip#52 - Display Android screen on Desktop</PostTitle>
-</PostData>
-<PostContent><![CDATA[You can display the Android mobile screen on your desktop by connecting the mobile via USB cable.<br />
-This can come in handy when you want to do a presentation from your mobile.<br />
-<br />
-An external desktop software is needed to display the mobile screen on the desktop. There are many softwares that provide this functionality.<br />
-Droid@Screen is one of them and is very easy to use. To download Droid@Screen, click <a title="Droid@Screen" href="http://blog.ribomation.com/droid-at-screen/">here</a> (http://blog.ribomation.com/droid-at-screen/).<br />
-<br />
-<span style="text-decoration: underline;"><strong>Note</strong></span>: You must have the Android SDK installed on your desktop to use this. Android SDK is a prerequisite because it uses the Android ADB tools to achieve this functionality.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="201"
-MetaKey="ratings_users"
-MetaValue="23"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="201"
-MetaKey="ratings_score"
-MetaValue="92"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="201"
-MetaKey="ratings_average"
-MetaValue="4"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="201"
-Taxonomy="category"
->
-<TermName>Advanced</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="199"
-PublishDate="2012-11-18 19:42:08"
-Author="mastram"
-ModifiedDate="2012-11-18 19:42:08"
->
-<PostTitle>Tip#51 - Android version animation</PostTitle>
-</PostData>
-<PostContent><![CDATA[Go to Settings &gt; About Phone. Tap the 'Android Version' repeatedly for some time and see the magic. The Android version will be animated.<br />
-<br />
-Press and hold the animation to see more effects.<br />
-<br />
-<span style="text-decoration: underline;"><strong>Note</strong></span>: This works on only devices with Android version 2.3 +]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="199"
-MetaKey="ratings_users"
-MetaValue="13"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="199"
-MetaKey="ratings_score"
-MetaValue="59"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="199"
-MetaKey="ratings_average"
-MetaValue="4.53846153846"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="199"
-Taxonomy="category"
->
-<TermName>Shortcuts</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="199"
-Taxonomy="post_tag"
->
-<TermName>cheatcodes</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="191"
-PublishDate="2012-11-14 07:50:31"
-Author="mastram"
-ModifiedDate="2012-11-14 07:50:31"
->
-<PostTitle>Tip# 49 - WiFi File transfer from and to Android Device</PostTitle>
-</PostData>
-<PostContent><![CDATA[There are many ways you can transfer files from and to Android device.<br />
-Obviously you can connect the USB cable to the computer and transfer files. However, at times when you are too lazy or can't find your USB cable, you can still transfer files over your Wi-Fi.<br />
-<br />
-Some apps than enable File transfer via Wi-Fi:<br />
-<ul><br />
-	<li>Kies Air : This app is developed by Samsung and is bundled with Samsung phones by default. Once you switch on the Kies Air, you can browse the android file system on your computer and download / upload.<br />
-Download <a title="Samsung Kies Air" href="https://play.google.com/store/apps/details?id=com.samsung.swift.app.kiesair">Samsung Kies Air</a></li><br />
-	<li>FTP Server : You can install a FTP server on your android device and access the files from desktop using any FTP client. There are many FTP server apps available on the market. The FTP Server app by Andreas Liebig is quiet famous.<br />
-Download <a title="FTPServer" href="https://play.google.com/store/apps/details?id=lutey.FTPServer">FTP Server</a></li><br />
-</ul>]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="191"
-MetaKey="ratings_users"
-MetaValue="14"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="191"
-MetaKey="ratings_score"
-MetaValue="64"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="191"
-MetaKey="ratings_average"
-MetaValue="4.57142857143"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="191"
-Taxonomy="category"
->
-<TermName>Advanced</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="191"
-Taxonomy="category"
->
-<TermName>App Recommendations</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="191"
-Taxonomy="post_tag"
->
-<TermName>SD Card</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="191"
-Taxonomy="post_tag"
->
-<TermName>File Management</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="179"
-PublishDate="2012-11-05 18:52:58"
-Author="mastram"
-ModifiedDate="2012-11-05 18:52:58"
->
-<PostTitle>Tip#47 - Save images from web on Android</PostTitle>
-</PostData>
-<PostContent><![CDATA[You can save images on any web page while browsing on your Android phone. <br />
-To save images, just do a long press on the image. Options to save image will appear.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="179"
-MetaKey="ratings_users"
-MetaValue="6"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="179"
-MetaKey="ratings_score"
-MetaValue="26.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="179"
-MetaKey="ratings_average"
-MetaValue="4.41666666667"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="179"
-Taxonomy="category"
->
-<TermName>Shortcuts</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="179"
-Taxonomy="post_tag"
->
-<TermName>Browsing</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="170"
-PublishDate="2012-10-29 19:15:14"
-Author="mastram"
-ModifiedDate="2012-10-29 19:18:47"
->
-<PostTitle>Tip#44 - Upgrade to 4.0.4</PostTitle>
-</PostData>
-<PostContent><![CDATA[If possible, upgrade to Android version 4.0.4. This is an incremental update to existing Ice Cream Sandwich version and offers better performance and better battery life. <br />
-Some users have reported 30 - 40% more battery life.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="170"
-MetaKey="ratings_users"
-MetaValue="6"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="170"
-MetaKey="ratings_score"
-MetaValue="22.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="170"
-MetaKey="ratings_average"
-MetaValue="3.75"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="170"
-Taxonomy="category"
->
-<TermName>Advanced</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="166"
-PublishDate="2012-10-16 15:24:40"
-Author="mastram"
-ModifiedDate="2012-10-16 15:24:40"
->
-<PostTitle>Tip#43 - Dismiss individual notifications</PostTitle>
-</PostData>
-<PostContent><![CDATA[In Android version 4.0 and onwards, you can dismiss individual notifications by swiping on them in either directions.<br />
-In older versions, this was not possible. You could only clear all notifications at once using the clear button on the notification bar.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="166"
-MetaKey="ratings_users"
-MetaValue="14"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="166"
-MetaKey="ratings_score"
-MetaValue="51.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="166"
-MetaKey="ratings_average"
-MetaValue="3.67857142857"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="166"
-Taxonomy="category"
->
-<TermName>Shortcuts</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="166"
-Taxonomy="post_tag"
->
-<TermName>Notifications</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="159"
-PublishDate="2012-10-12 11:53:09"
-Author="mastram"
-ModifiedDate="2012-10-12 11:53:09"
->
-<PostTitle>Tip#41 - Know your battery health</PostTitle>
-</PostData>
-<PostContent><![CDATA[You can find out detailed information about your phone battery by dialing the following code: <span style="color: #0000ff;"><strong>*#*#4636#*#* </strong></span><br />
-<br />
-This code will show you various options like:<br />
-<ol><br />
-	<li>Phone Information</li><br />
-	<li>Battery Information</li><br />
-	<li>Usage Statistics</li><br />
-	<li>Wi-Fi Information</li><br />
-</ol><br />
-Select Battery Information to know the health of your battery.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="159"
-MetaKey="ratings_users"
-MetaValue="15"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="159"
-MetaKey="ratings_score"
-MetaValue="72"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="159"
-MetaKey="ratings_average"
-MetaValue="4.8"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="159"
-Taxonomy="category"
->
-<TermName>Battery</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="159"
-Taxonomy="post_tag"
->
-<TermName>cheatcodes</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="157"
-PublishDate="2012-10-11 05:22:06"
-Author="mastram"
-ModifiedDate="2012-10-11 05:22:06"
->
-<PostTitle>Tip#40 - Copy Contacts from Old Phone</PostTitle>
-</PostData>
-<PostContent><![CDATA[Copying contacts in your new Android phone is very simple. Best way is to go the traditional way which always works.<br />
-<br />
-<strong>Copying from Sim</strong>: From your old phone, copy the contacts to your SIM card. Then insert that SIM into the new Android phone and copy from SIM.<br />
-<br />
-<strong>Copy via .VCF format</strong>: Alternatively, you can also export your contacts into the standard .VCF format and copy it to your SD Card. Then load it from the SD card. To import your contacts, do the following:<br />
-Go to <strong>Contacts</strong> &gt; <strong>Menu</strong> &gt; <strong>Import / Export Contacts.</strong> Here you can either import from SD card (from a .VCF file) or directly from SIM card.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="157"
-MetaKey="ratings_users"
-MetaValue="7"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="157"
-MetaKey="ratings_score"
-MetaValue="30"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="157"
-MetaKey="ratings_average"
-MetaValue="4.28571428571"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="157"
-Taxonomy="category"
->
-<TermName>Customization</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="157"
-Taxonomy="post_tag"
->
-<TermName>Contacts</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="155"
-PublishDate="2012-10-09 10:43:28"
-Author="mastram"
-ModifiedDate="2012-10-09 10:43:28"
->
-<PostTitle>Tip#39 - Take screen shot of your mobile</PostTitle>
-</PostData>
-<PostContent><![CDATA[Have something funny, great, weird (like your new high score in your favorite game) thing on your mobile and want to share with your friends ? -- <strong>Just take a screen shot</strong>.<br />
-<br />
-On phones with <span style="text-decoration: underline;"><strong>Ice Cream Sandwich (v.4.0) or above</strong></span>, you can take screen shots by holding the <strong>Power</strong> + <strong>Home</strong> button for 2 seconds.<br />
-<br />
-The screen shot will be taken and will be saved in your gallery. You can share it via email, MMS or any other sharing service.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="155"
-MetaKey="ratings_users"
-MetaValue="8"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="155"
-MetaKey="ratings_score"
-MetaValue="38.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="155"
-MetaKey="ratings_average"
-MetaValue="4.8125"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="155"
-Taxonomy="category"
->
-<TermName>Shortcuts</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="141"
-PublishDate="2012-09-23 11:40:42"
-Author="mastram"
-ModifiedDate="2012-09-23 11:40:42"
->
-<PostTitle>Tip#35 - Get Free Offline Navigation</PostTitle>
-</PostData>
-<PostContent><![CDATA[Turn by Turn navigation is offered by Google Navigation app. However, this app needs online data connection i.e. without an active internet connection, this app cannot be used.<br />
-<br />
-There are some apps available on the Google Play store that provide <strong>offline</strong> navigation capabilities. The maps data and local data is cached on the mobile.<br />
-<br />
-Apps available on Google Play Store (click to download):<br />
-<ol><br />
-	<li><a title="https://play.google.com/store/apps/details?id=com.navfree.android.OSM.ALL" href="https://play.google.com/store/apps/details?id=com.navfree.android.OSM.ALL">Navfree Free GPS Navigation</a> -- This is a free app.</li><br />
-	<li><a title="https://play.google.com/store/apps/details?id=com.sygic.aura" href="https://play.google.com/store/apps/details?id=com.sygic.aura">Sygic: GPS Navigation</a> - This is a paid app. Free limited trial is available.</li><br />
-</ol><br />
-<strong>Note</strong>:<br />
-<ul><br />
-	<li>You will need your GPS to be active in order to get navigation features</li><br />
-	<li>Since these apps download the maps data, it requires large amounts of memory. It is <span style="text-decoration: underline;"><strong>NOT</strong></span> recommended to try these apps on low end devices with limited memory.</li><br />
-</ul>]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="141"
-MetaKey="ratings_users"
-MetaValue="7"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="141"
-MetaKey="ratings_score"
-MetaValue="32.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="141"
-MetaKey="ratings_average"
-MetaValue="4.64285714286"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="141"
-Taxonomy="post_tag"
->
-<TermName>GPS</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="141"
-Taxonomy="category"
->
-<TermName>App Recommendations</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="141"
-Taxonomy="post_tag"
->
-<TermName>Navigation</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="138"
-PublishDate="2012-09-23 10:00:59"
-Author="mastram"
-ModifiedDate="2012-09-23 10:00:59"
->
-<PostTitle>Tip#34 - Lock you Sim Card</PostTitle>
-</PostData>
-<PostContent><![CDATA[In worst case scenarios if you phone is stolen, your SIM card could be misused. You can also lock you Sim card to avoid any misuse.<br />
-<br />
-To lock you Sim, go to Settings -&gt; Security and Set up Sim Card Lock. Once set, a PIN will be required to use the SIM if it is inserted into a new phone.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="138"
-MetaKey="ratings_users"
-MetaValue="4"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="138"
-MetaKey="ratings_score"
-MetaValue="18"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="138"
-MetaKey="ratings_average"
-MetaValue="4.5"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="138"
-Taxonomy="category"
->
-<TermName>Advanced</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="138"
-Taxonomy="post_tag"
->
-<TermName>Security</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="136"
-PublishDate="2012-09-21 12:27:21"
-Author="mastram"
-ModifiedDate="2012-09-21 12:27:21"
->
-<PostTitle>Tip#33 - Phone screen lock</PostTitle>
-</PostData>
-<PostContent><![CDATA[Android provides many ways to lock your phone screen so that others can not use. These settings are available in: Settings -- Security -- Screen Lock.<br />
-<br />
-<strong>Note</strong>: Not all methods are safe and fully secure. Here is a quick guide on how to set up your screen lock.<br />
-<ul><br />
-	<li><strong>None</strong> - Leaves the phone unlocked. Not secure at all</li><br />
-	<li><strong>Slide</strong> - Slide to un-lock. Any one can unlock. This is not at all hard to guess</li><br />
-	<li><strong>Face</strong> <strong>Unlock</strong> - This feature is available only on high end phones. This is not secure enough because anyone who has your photo can unlock it.</li><br />
-	<li><strong>Pattern</strong> - Provides a basic level of security. Patters are easy to remember. Anyone who is looking over your shoulder can see the pattern and unlock it.</li><br />
-	<li><strong>PIN</strong> - Medium to high security. You can choose your pin. Pin is only numbers</li><br />
-	<li><strong>Password</strong> - High security. You can choose an alpha-numeric password that can be hard to crack.</li><br />
+    <PostsInfoRow>
+        <PostData
+            Id="53"
+            PublishDate="2019-03-04 10:57:34"
+            Author="admin"
+            ModifiedDate="2019-03-04 10:57:34"
+        >
+            <PostTitle>Screen shots on your mobile</PostTitle>
+        </PostData>
+        <PostContent>
+            <![CDATA[Have something funny, great, weird (like your new high score in your favorite game) thing on your mobile and want to share with your friends ? — <strong>Just take a screen shot</strong>.<br /><br />
+Depending on your manufacturer, the shortcuts may differ. Try one of these :<br /><ul><br /><li>Long press power button -- Option to take screen show will appear</li><br /><li>Press Power + Volume up button at the same time</li><br /><li>Press Power + Volume down button at the same time</li><br />
 </ul><br />
-&nbsp;]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="136"
-MetaKey="ratings_users"
-MetaValue="4"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="136"
-MetaKey="ratings_score"
-MetaValue="18"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="136"
-MetaKey="ratings_average"
-MetaValue="4.5"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="136"
-Taxonomy="category"
->
-<TermName>Customization</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="136"
-Taxonomy="category"
->
-<TermName>Advanced</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="136"
-Taxonomy="post_tag"
->
-<TermName>Security</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="134"
-PublishDate="2012-09-21 06:50:09"
-Author="mastram"
-ModifiedDate="2012-09-21 06:50:09"
->
-<PostTitle>Tip#32 - Get System Info</PostTitle>
-</PostData>
-<PostContent><![CDATA[Android provides basic level of technical info via Settings - About. However, you can get a detailed level of technical info(Hardware, System, Telephony...etc).<br />
-<br />
-<strong>Recommended apps</strong>:<br />
-<ul><br />
-	<li><strong>Android System Info</strong> : One of the best. Provides a dashboard with all the required info.</li><br />
-	<li><strong>System Info</strong></li><br />
-	<li><strong>SystemPanel App / Task Manager</strong></li><br />
-	<li><strong>Smart System Info</strong></li><br />
-</ul>]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="134"
-MetaKey="ratings_users"
-MetaValue="5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="134"
-MetaKey="ratings_score"
-MetaValue="22"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="134"
-MetaKey="ratings_average"
-MetaValue="4.4"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="134"
-Taxonomy="category"
->
-<TermName>App Recommendations</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="132"
-PublishDate="2012-09-15 20:09:06"
-Author="mastram"
-ModifiedDate="2012-09-15 20:09:06"
->
-<PostTitle>Tip#31 - Install apps on SD Card</PostTitle>
-</PostData>
-<PostContent><![CDATA[Starting from the Android version 2.2 (Froyo) apps can be installed on SD card also. Some low end mobiles have limited internal memory. You can free up some internal memory by pushing apps to the SD Card. To push apps to SD Card, follow the steps:<br />
-<ul><br />
-	<li>Go to Settings -- Application Settings -- Manage Application</li><br />
-	<li>Select the app. You will see the option: "Move to SD Card"</li><br />
+The screen shot will be taken and will be saved in your gallery.]]>
+        </PostContent>
+        <PostMetaData>
+            <PostMetaDataRow
+                PostId="53"
+                MetaKey="ratings_users"
+                MetaValue="1"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="53"
+                MetaKey="ratings_score"
+                MetaValue="5"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="53"
+                MetaKey="ratings_average"
+                MetaValue="5"
+            ></PostMetaDataRow>
+        </PostMetaData>
+        <CommentsData></CommentsData>
+        <TermsData>
+            <TermsDataRow
+                PostId="53"
+                Taxonomy="category"
+            >
+                <TermName>Any Android Version</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="53"
+                Taxonomy="category"
+            >
+                <TermName>All Phone Models</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="53"
+                Taxonomy="post_tag"
+            >
+                <TermName>shortcuts</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="53"
+                Taxonomy="post_tag"
+            >
+                <TermName>tricks</TermName>
+            </TermsDataRow>
+        </TermsData>
+    </PostsInfoRow>
+    <PostsInfoRow>
+        <PostData
+            Id="51"
+            PublishDate="2019-03-04 10:51:24"
+            Author="admin"
+            ModifiedDate="2019-03-04 10:51:24"
+        >
+            <PostTitle>Antivirus for Android</PostTitle>
+        </PostData>
+        <PostContent>
+            <![CDATA[Similar to desktop computers, Mobile phones also need Anti Virus software (applications).<br /><br />
+These antivirus apps can protect your phone from various attacks like phishing. There are many antivirus apps like:<br /><ul><br /><li>AVG Antivirus</li><br /><li>Avast Mobile Security</li><br /><li>Nortan AntiVirus</li><br /><li>McAfee antivirus</li><br />
 </ul><br />
-This option will be available only if the application is programmed in such a way that it can be installed on SD card.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="132"
-MetaKey="ratings_users"
-MetaValue="3"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="132"
-MetaKey="ratings_score"
-MetaValue="13"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="132"
-MetaKey="ratings_average"
-MetaValue="4.33333333333"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="132"
-Taxonomy="category"
->
-<TermName>Advanced</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="132"
-Taxonomy="post_tag"
->
-<TermName>memory</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="132"
-Taxonomy="post_tag"
->
-<TermName>SD Card</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="90"
-PublishDate="2012-09-12 19:41:30"
-Author="mastram"
-ModifiedDate="2012-09-14 19:20:25"
->
-<PostTitle>Tip#29 - Set ringtone for contacts</PostTitle>
-</PostData>
-<PostContent><![CDATA[You can also set different ringtones for each contact. To do so, go to Contacts, select a contact. You will see an option to set the ringtone. It depends on your device and Android version. If you don't find this option, then press Menu and look for this option.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="90"
-MetaKey="ratings_users"
-MetaValue="4"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="90"
-MetaKey="ratings_score"
-MetaValue="16.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="90"
-MetaKey="ratings_average"
-MetaValue="4.125"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="90"
-Taxonomy="category"
->
-<TermName>Customization</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="90"
-Taxonomy="post_tag"
->
-<TermName>Ringtone</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="90"
-Taxonomy="post_tag"
->
-<TermName>Contacts</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="86"
-PublishDate="2012-09-12 19:34:20"
-Author="mastram"
-ModifiedDate="2012-09-14 19:20:31"
->
-<PostTitle>Tip#27 - Rearrange app icons</PostTitle>
-</PostData>
-<PostContent><![CDATA[<strong><span style="text-decoration: underline;">Rearrange Icons</span></strong>: You can rearrange application icons on your home screen as per your needs. To move an icon, press and hold the icon until is starts floating. Then drag and drop it at any place where ever you need it.<br />
-<br />
-<span style="text-decoration: underline;"><strong>Add new home screen</strong></span>: To add / remove home screens, press the menu button on the home screen and edit. It will show you options to add a new page or remove an existing one.<br />
-<br />
-If you remove icons from home screen, it DOES NOT delete the application.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="86"
-MetaKey="ratings_users"
-MetaValue="4"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="86"
-MetaKey="ratings_score"
-MetaValue="16"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="86"
-MetaKey="ratings_average"
-MetaValue="4"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="86"
-Taxonomy="category"
->
-<TermName>Customization</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="81"
-PublishDate="2012-09-12 19:18:43"
-Author="mastram"
-ModifiedDate="2012-09-15 19:57:46"
->
-<PostTitle>Tip#25 - Block incomming calls</PostTitle>
-</PostData>
-<PostContent><![CDATA[Android provides you option to block a contact from contacting you again. This option is available in the contacts.<br />
-<br />
-Select the contact and press the menu button and add the contact to the reject list.<br />
-<br />
-<strong>Note</strong>: This option depends on phone model / android version.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="81"
-MetaKey="ratings_users"
-MetaValue="4"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="81"
-MetaKey="ratings_score"
-MetaValue="14"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="81"
-MetaKey="ratings_average"
-MetaValue="3.5"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="81"
-Taxonomy="category"
->
-<TermName>Advanced</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="81"
-Taxonomy="post_tag"
->
-<TermName>Security</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="76"
-PublishDate="2012-09-12 19:13:56"
-Author="mastram"
-ModifiedDate="2012-09-14 19:21:53"
->
-<PostTitle>Tip#24 -- Antivirus for Android</PostTitle>
-</PostData>
-<PostContent><![CDATA[Similar to desktop computers, Mobile phones also need Anti Virus software (applications). These antivirus apps can protect your phone from various attacks like phishing. There are many antivirus apps like:<br />
-<ul><br />
-	<li>AVG Antivirus</li><br />
-	<li>Avast Mobile Security</li><br />
-	<li>Nortan AntiVirus</li><br />
-	<li>McAfee antivirus</li><br />
-</ul><br />
-All these apps provide similar features. These apps also provide you feature to wipe your mobile data remotely in case your mobile is lost or stolen.<br />
-<br />
-You can download anyone as per your personal preference.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="76"
-MetaKey="ratings_users"
-MetaValue="5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="76"
-MetaKey="ratings_score"
-MetaValue="22.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="76"
-MetaKey="ratings_average"
-MetaValue="4.5"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="76"
-Taxonomy="category"
->
-<TermName>Advanced</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="76"
-Taxonomy="post_tag"
->
-<TermName>Security</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="74"
-PublishDate="2012-09-12 19:07:00"
-Author="mastram"
-ModifiedDate="2012-09-14 19:22:02"
->
-<PostTitle>Tip#23 - Phone Backup</PostTitle>
-</PostData>
-<PostContent><![CDATA[You can backup your phones data like contacts, applications, settings, media and restore it at a later point in time. There are multiple ways to backup your data. For e.g :<br />
-<ul><br />
-	<li>You can download an app from Google Play for backup and restore.</li><br />
-	<li>Some device manufactures also provide a software to managing the device. For e.g. Samsung provides Kies which can backup and restore mobile data.</li><br />
-	<li>Advanced version of Android provides you option to backup and restore mobile data from google servers. This setting can be found in: Settings -- Backup and Reset</li><br />
-</ul>]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="74"
-MetaKey="ratings_users"
-MetaValue="4"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="74"
-MetaKey="ratings_score"
-MetaValue="18"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="74"
-MetaKey="ratings_average"
-MetaValue="4.5"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="74"
-Taxonomy="category"
->
-<TermName>Advanced</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="74"
-Taxonomy="post_tag"
->
-<TermName>Security</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="72"
-PublishDate="2012-09-12 13:02:47"
-Author="mastram"
-ModifiedDate="2012-09-14 19:22:06"
->
-<PostTitle>Tip#22 - Screen brightness</PostTitle>
-</PostData>
-<PostContent><![CDATA[The screen is one of the biggest power consumer. The longer the screen is lit up, the more power it will consume. You can save power in 2 ways:<br />
-<ol><br />
-	<li>Reduce the brightness of the screen. This can be done ins Settings -- Sound and Display -- Brightness</li><br />
-	<li>Reduce the auto-lock time. Thus, the screen will be locked quickly when it is left idle and will save power. This can be done in: Settings -- Sound and Display -- Screen timeout</li><br />
-</ol><br />
-Note: In some devices, android version these settings may be provided in different places. Please look for them in Settings app.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="72"
-MetaKey="ratings_users"
-MetaValue="5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="72"
-MetaKey="ratings_score"
-MetaValue="20.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="72"
-MetaKey="ratings_average"
-MetaValue="4.1"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="72"
-Taxonomy="category"
->
-<TermName>Battery</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="72"
-Taxonomy="category"
->
-<TermName>Customization</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="68"
-PublishDate="2012-09-12 12:57:11"
-Author="mastram"
-ModifiedDate="2012-09-14 19:22:11"
->
-<PostTitle>Tip#21 - Power Saving Tips</PostTitle>
-</PostData>
-<PostContent><![CDATA[Application that rely on Internet connections, GPS, WiFi etc usually consume lot of power. When running out of power, avoid usage of following apps:<br />
-<ul><br />
-	<li>Email - Needs internet connection</li><br />
-	<li>Maps - Needs Internet and GPS</li><br />
-	<li>Games - Consume lot of battery</li><br />
-	<li>Browser</li><br />
-	<li>Social networking - they perform large amounts of network calls to cache images etc.</li><br />
-</ul><br />
-If you want to save power for listening to music or watching videos, then you can switch to Airplane mode. In airplane mode, it will not make any network, GPS, Blutooth, Wifi searches and you can save power.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="68"
-MetaKey="ratings_users"
-MetaValue="5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="68"
-MetaKey="ratings_score"
-MetaValue="19.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="68"
-MetaKey="ratings_average"
-MetaValue="3.9"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="68"
-Taxonomy="category"
->
-<TermName>Battery</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="54"
-PublishDate="2012-09-12 12:27:11"
-Author="mastram"
-ModifiedDate="2012-09-14 19:22:47"
->
-<PostTitle>Tip#16 - URL of Hyperlinks</PostTitle>
-</PostData>
-<PostContent><![CDATA[To know the URL of the hyperlinks, just do a long press on the hyper link. The menu will show the complete URL of the hyperlink along with other options like copy, bookmark etc. <br> You can use this trick as a security tip while browsing.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="54"
-MetaKey="ratings_users"
-MetaValue="3"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="54"
-MetaKey="ratings_score"
-MetaValue="13"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="54"
-MetaKey="ratings_average"
-MetaValue="4.33333333333"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="54"
-Taxonomy="category"
->
-<TermName>Browsing</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="54"
-Taxonomy="post_tag"
->
-<TermName>Security</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="45"
-PublishDate="2012-09-12 12:01:57"
-Author="mastram"
-ModifiedDate="2012-09-14 19:23:02"
->
-<PostTitle>Tip#13 - Factory reset your phone</PostTitle>
-</PostData>
-<PostContent><![CDATA[If you wish to restore your phone to default factory settings, then you can perform a hard reset. This will delete all the data. This can be done in following ways:<br />
-<ul><br />
-	<li>Go to Settings –&gt; Privacy –&gt; Factory data reset. This method is valid for all the mobile phones. However, many users have experienced problems in resetting the phone using this method. Also, please note that this method only does a factory reset.</li><br />
-	<li>Hard reset using a hack code: <strong>*2767*3855#</strong> — Dial this code on your phone. Please note: DO NOT TRY THIS for testing purpose unless you are sure what you want to do. This code does not ask for a confirmation.</li><br />
-	<li>Factory reset using: <strong>*#*#7780#*#*</strong> — Dial this code on your phone. This will ask you for a confirmation before resetting.</li><br />
-</ul>]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="45"
-MetaKey="ratings_users"
-MetaValue="3"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="45"
-MetaKey="ratings_score"
-MetaValue="13.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="45"
-MetaKey="ratings_average"
-MetaValue="4.5"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="45"
-Taxonomy="category"
->
-<TermName>Troubleshoot</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="45"
-Taxonomy="post_tag"
->
-<TermName>cheatcodes</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="43"
-PublishDate="2012-09-12 11:54:18"
-Author="mastram"
-ModifiedDate="2012-09-14 19:23:06"
->
-<PostTitle>Tip#12 - Silence your phone</PostTitle>
-</PostData>
-<PostContent><![CDATA[If you quickly want to silence your phone while it is ringing, just press the volume key once.  The phone will stop ringing and vibrating.<br />
-This trick is very useful when you are in meeting or in public places.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="43"
-MetaKey="ratings_users"
-MetaValue="4"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="43"
-MetaKey="ratings_score"
-MetaValue="16"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="43"
-MetaKey="ratings_average"
-MetaValue="4"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="43"
-Taxonomy="category"
->
-<TermName>Shortcuts</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="35"
-PublishDate="2012-09-12 06:26:40"
-Author="mastram"
-ModifiedDate="2012-09-14 19:23:19"
->
-<PostTitle>Tip#10 - Change Keyboard</PostTitle>
-</PostData>
-<PostContent><![CDATA[Some phones like the ones manufactured by Samsung provide you additional apps for typing. For e.g. Swype.<br />
-<br />
-To change your keyboard: Go to Settings -- Language and Input and change your settings here.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="35"
-MetaKey="ratings_users"
-MetaValue="3"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="35"
-MetaKey="ratings_score"
-MetaValue="12.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="35"
-MetaKey="ratings_average"
-MetaValue="4.16666666667"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="35"
-Taxonomy="category"
->
-<TermName>Customization</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="35"
-Taxonomy="post_tag"
->
-<TermName>Typing</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="29"
-PublishDate="2012-09-12 05:57:51"
-Author="mastram"
-ModifiedDate="2012-09-14 19:23:28"
->
-<PostTitle>Tip#8 - Context menu in Android</PostTitle>
-</PostData>
-<PostContent><![CDATA[A long press (for about 2 seconds) will show additional options. This is similar to right mouse click on desktops which shows additional actions that can be performed on screen.<br />
-<br><br />
-For e.g. do a long press on home screen to see options like: Shortcuts, Widgets, Folders etc.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="29"
-MetaKey="ratings_users"
-MetaValue="3"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="29"
-MetaKey="ratings_score"
-MetaValue="13"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="29"
-MetaKey="ratings_average"
-MetaValue="4.33333333333"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="29"
-Taxonomy="category"
->
-<TermName>Shortcuts</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="29"
-Taxonomy="category"
->
-<TermName>Customization</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="22"
-PublishDate="2012-09-11 15:44:02"
-Author="mastram"
-ModifiedDate="2012-09-14 19:23:36"
->
-<PostTitle>Tip#6 - Find Wifi Mac address</PostTitle>
-</PostData>
-<PostContent><![CDATA[To know the Mac address of your Android Wifi, use any of the following methods:<br />
-<ul><br />
-	<li>Go to Settings –&gt; About Phone –&gt; Status.  Here, towards the end you will find Wi-Fi MAC Address.</li><br />
-	<li>Go to Settings –&gt; Wireless &amp; Networks –&gt; Wi-Fi Settings. Here, press menu to get the advanced options. In the advanced options screen, you will see MAC Address</li><br />
-	<li>Type the following code <strong>*#*#232338#*#*</strong> to see the WiFi Mac address. -- This may work only on Samsung phones.</li><br />
-</ul>]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="22"
-MetaKey="ratings_users"
-MetaValue="3"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="22"
-MetaKey="ratings_score"
-MetaValue="13.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="22"
-MetaKey="ratings_average"
-MetaValue="4.5"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="22"
-Taxonomy="category"
->
-<TermName>Advanced</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="22"
-Taxonomy="post_tag"
->
-<TermName>cheatcodes</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="22"
-Taxonomy="post_tag"
->
-<TermName>WiFi</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="20"
-PublishDate="2012-09-11 15:40:24"
-Author="mastram"
-ModifiedDate="2012-09-14 19:23:42"
->
-<PostTitle>Tip#5 - Manage Internal Memory</PostTitle>
-</PostData>
-<PostContent><![CDATA[On low end Android devices, the internal memory is limited. You can free up internal memory by clearing the cache.<br />
-<br />
-To clear the cache, go to Settings -&gt; Manage Applications. Select the application and clear cache.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="20"
-MetaKey="ratings_users"
-MetaValue="4"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="20"
-MetaKey="ratings_score"
-MetaValue="16.5"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="20"
-MetaKey="ratings_average"
-MetaValue="4.125"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="20"
-Taxonomy="category"
->
-<TermName>Advanced</TermName>
-
-</TermsDataRow>
-<TermsDataRow 
-PostId="20"
-Taxonomy="post_tag"
->
-<TermName>memory</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
-<PostsInfoRow>
-<PostData 
-Id="8"
-PublishDate="2012-09-06 20:08:13"
-Author="mastram"
-ModifiedDate="2012-09-14 19:24:01"
->
-<PostTitle>Tip#2 : Force Reboot</PostTitle>
-</PostData>
-<PostContent><![CDATA[In case your mobile is frozen, you can reboot it by holding : <strong>Power Button</strong> + <strong>Home Key</strong> + <strong>Volume Up</strong> button simultaneously.]]></PostContent>
-<PostMetaData>
-<PostMetaDataRow 
-PostId="8"
-MetaKey="ratings_users"
-MetaValue="13"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="8"
-MetaKey="ratings_score"
-MetaValue="53"
->
-</PostMetaDataRow>
-<PostMetaDataRow 
-PostId="8"
-MetaKey="ratings_average"
-MetaValue="4.07692307692"
->
-</PostMetaDataRow>
-</PostMetaData><CommentsData>
-</CommentsData><TermsData>
-<TermsDataRow 
-PostId="8"
-Taxonomy="category"
->
-<TermName>Troubleshoot</TermName>
-
-</TermsDataRow>
-</TermsData></PostsInfoRow>
+All these apps provide similar features. These apps also provide you feature to wipe your mobile data remotely in case your mobile is lost or stolen.<br /><br />
+You can download anyone as per your personal preference.]]>
+        </PostContent>
+        <PostMetaData>
+            <PostMetaDataRow
+                PostId="51"
+                MetaKey="ratings_users"
+                MetaValue="1"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="51"
+                MetaKey="ratings_score"
+                MetaValue="5"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="51"
+                MetaKey="ratings_average"
+                MetaValue="5"
+            ></PostMetaDataRow>
+        </PostMetaData>
+        <CommentsData></CommentsData>
+        <TermsData>
+            <TermsDataRow
+                PostId="51"
+                Taxonomy="category"
+            >
+                <TermName>Any Android Version</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="51"
+                Taxonomy="category"
+            >
+                <TermName>All Phone Models</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="51"
+                Taxonomy="post_tag"
+            >
+                <TermName>security</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="51"
+                Taxonomy="post_tag"
+            >
+                <TermName>app-recommendations</TermName>
+            </TermsDataRow>
+        </TermsData>
+    </PostsInfoRow>
+    <PostsInfoRow>
+        <PostData
+            Id="49"
+            PublishDate="2019-03-04 10:47:43"
+            Author="admin"
+            ModifiedDate="2019-03-04 10:47:43"
+        >
+            <PostTitle>Power Saving Tips</PostTitle>
+        </PostData>
+        <PostContent>
+            <![CDATA[Application that rely on Internet connections, GPS, WiFi etc usually consume lot of power. When running out of power, avoid usage of following apps:<br /><ul><br /><li>Email – Needs internet connection</li><br /><li>Maps – Needs Internet and GPS</li><br /><li>Games – Consume lot of battery</li><br /><li>Browser</li><br /><li>Social networking – they perform large amounts of network calls to cache images etc.</li><br />
+</ul>]]>
+        </PostContent>
+        <PostMetaData>
+            <PostMetaDataRow
+                PostId="49"
+                MetaKey="ratings_users"
+                MetaValue="1"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="49"
+                MetaKey="ratings_score"
+                MetaValue="5"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="49"
+                MetaKey="ratings_average"
+                MetaValue="5"
+            ></PostMetaDataRow>
+        </PostMetaData>
+        <CommentsData></CommentsData>
+        <TermsData>
+            <TermsDataRow
+                PostId="49"
+                Taxonomy="category"
+            >
+                <TermName>Any Android Version</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="49"
+                Taxonomy="category"
+            >
+                <TermName>All Phone Models</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="49"
+                Taxonomy="post_tag"
+            >
+                <TermName>tricks</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="49"
+                Taxonomy="post_tag"
+            >
+                <TermName>battery</TermName>
+            </TermsDataRow>
+        </TermsData>
+    </PostsInfoRow>
+    <PostsInfoRow>
+        <PostData
+            Id="47"
+            PublishDate="2019-03-04 10:38:37"
+            Author="admin"
+            ModifiedDate="2019-03-04 10:38:37"
+        >
+            <PostTitle>URL of Hyperlinks</PostTitle>
+        </PostData>
+        <PostContent>
+            <![CDATA[To know the URL of the hyperlinks, just do a long press on the hyper link.<br /><br />
+The menu will show the complete URL of the hyperlink along with other options like copy, bookmark etc.<br /><br />
+You can use this trick as a security tip while browsing.]]>
+        </PostContent>
+        <PostMetaData>
+            <PostMetaDataRow
+                PostId="47"
+                MetaKey="ratings_users"
+                MetaValue="1"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="47"
+                MetaKey="ratings_score"
+                MetaValue="5"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="47"
+                MetaKey="ratings_average"
+                MetaValue="5"
+            ></PostMetaDataRow>
+        </PostMetaData>
+        <CommentsData></CommentsData>
+        <TermsData>
+            <TermsDataRow
+                PostId="47"
+                Taxonomy="category"
+            >
+                <TermName>Any Android Version</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="47"
+                Taxonomy="category"
+            >
+                <TermName>All Phone Models</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="47"
+                Taxonomy="post_tag"
+            >
+                <TermName>tricks</TermName>
+            </TermsDataRow>
+        </TermsData>
+    </PostsInfoRow>
+    <PostsInfoRow>
+        <PostData
+            Id="45"
+            PublishDate="2019-03-04 10:36:02"
+            Author="admin"
+            ModifiedDate="2019-03-04 10:36:02"
+        >
+            <PostTitle>Silence your phone</PostTitle>
+        </PostData>
+        <PostContent>
+            <![CDATA[If you quickly want to silence your phone while it is ringing,  just press the volume key once.<br /><br />
+The phone will stop ringing and vibrating.<br /><br />
+This trick is very useful when you are in meeting or in public places.]]>
+        </PostContent>
+        <PostMetaData>
+            <PostMetaDataRow
+                PostId="45"
+                MetaKey="ratings_users"
+                MetaValue="1"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="45"
+                MetaKey="ratings_score"
+                MetaValue="5"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="45"
+                MetaKey="ratings_average"
+                MetaValue="5"
+            ></PostMetaDataRow>
+        </PostMetaData>
+        <CommentsData></CommentsData>
+        <TermsData>
+            <TermsDataRow
+                PostId="45"
+                Taxonomy="category"
+            >
+                <TermName>Any Android Version</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="45"
+                Taxonomy="category"
+            >
+                <TermName>All Phone Models</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="45"
+                Taxonomy="post_tag"
+            >
+                <TermName>shortcuts</TermName>
+            </TermsDataRow>
+        </TermsData>
+    </PostsInfoRow>
+    <PostsInfoRow>
+        <PostData
+            Id="33"
+            PublishDate="2019-03-03 20:36:56"
+            Author="admin"
+            ModifiedDate="2019-03-03 20:36:56"
+        >
+            <PostTitle>Context Menu in Android</PostTitle>
+        </PostData>
+        <PostContent>
+            <![CDATA[A long press (for about 2 seconds) will show additional options.<br />
+This is similar to right mouse click on desktops which shows additional actions that can be performed on screen.<br /><br />
+For e.g. do a long press on home screen to see options like: Shortcuts, Widgets, Folders etc.]]>
+        </PostContent>
+        <PostMetaData>
+            <PostMetaDataRow
+                PostId="33"
+                MetaKey="ratings_users"
+                MetaValue="1"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="33"
+                MetaKey="ratings_score"
+                MetaValue="5"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="33"
+                MetaKey="ratings_average"
+                MetaValue="5"
+            ></PostMetaDataRow>
+        </PostMetaData>
+        <CommentsData></CommentsData>
+        <TermsData>
+            <TermsDataRow
+                PostId="33"
+                Taxonomy="category"
+            >
+                <TermName>Any Android Version</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="33"
+                Taxonomy="category"
+            >
+                <TermName>All Phone Models</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="33"
+                Taxonomy="post_tag"
+            >
+                <TermName>shortcuts</TermName>
+            </TermsDataRow>
+        </TermsData>
+    </PostsInfoRow>
+    <PostsInfoRow>
+        <PostData
+            Id="11"
+            PublishDate="2019-03-01 22:44:20"
+            Author="admin"
+            ModifiedDate="2019-03-04 00:01:36"
+        >
+            <PostTitle>Return to home screen</PostTitle>
+        </PostData>
+        <PostContent>
+            <![CDATA[At any time , if you want to return to the home screen, just press the HOME button. Depending on your phone model, you may have a hard button or a soft touch screen button.<br /><br /><strong>Note</strong>: When you return to Home, the application is not closed. Application continues to run in background and may consume memory, battery, data services.]]>
+        </PostContent>
+        <PostMetaData>
+            <PostMetaDataRow
+                PostId="11"
+                MetaKey="ratings_users"
+                MetaValue="1"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="11"
+                MetaKey="ratings_score"
+                MetaValue="5"
+            ></PostMetaDataRow>
+            <PostMetaDataRow
+                PostId="11"
+                MetaKey="ratings_average"
+                MetaValue="5"
+            ></PostMetaDataRow>
+        </PostMetaData>
+        <CommentsData></CommentsData>
+        <TermsData>
+            <TermsDataRow
+                PostId="11"
+                Taxonomy="category"
+            >
+                <TermName>Any Android Version</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="11"
+                Taxonomy="category"
+            >
+                <TermName>All Phone Models</TermName>
+            </TermsDataRow>
+            <TermsDataRow
+                PostId="11"
+                Taxonomy="post_tag"
+            >
+                <TermName>shortcuts</TermName>
+            </TermsDataRow>
+        </TermsData>
+    </PostsInfoRow>
 </PostInfo>

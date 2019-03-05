@@ -25,31 +25,33 @@ public class PostRating extends Activity implements OnRatingBarChangeListener {
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
-		
+
 		super.onCreate(savedInstanceState);
-        setContentView(R.layout.rate);
-        
-        Intent intent = getIntent();
-        int postId = intent.getIntExtra("PostId", 0);
-        
-        try{
-        	post = Application.getApplicationInstance().getPostList().get(postId);
-        }catch (Exception e){
-        	Log.e(Application.TAG, e.getMessage(), e);
-        	finish();
-        }
-        
-        if(post == null){
-        	finish();
-        }
-        else{
-        	setTitle("Rate this post:");
-    		
-            ratingBar = (RatingBar) findViewById(R.id.ratingbar);
-            ratingBar.setNumStars(5);
-            ratingBar.setRating(post.getMyRating());
-            ratingBar.setOnRatingBarChangeListener(this);
-        }
+		setContentView(R.layout.rate);
+
+		Intent intent = getIntent();
+		int postIndex = intent.getIntExtra("PostIndex", 0);
+
+		try{
+
+			Application app = Application.getApplicationInstance();
+			post = app.getPostList().get(postIndex);
+
+			setTitle("Rate this post:");
+
+			ratingBar = (RatingBar) findViewById(R.id.ratingbar);
+			ratingBar.setNumStars(5);
+			ratingBar.setRating(post.getMyRating());
+			ratingBar.setOnRatingBarChangeListener(this);
+
+			Bundle bundle = new Bundle();
+			bundle.putString("post_id", post.getTitle());
+			app.getFirebaseAnalytics().logEvent("post_rating", bundle);
+
+		}catch (Exception e){
+			Log.e(Application.TAG, e.getMessage(), e);
+			finish();
+		}
 	}
 	
 	@Override
@@ -63,10 +65,7 @@ public class PostRating extends Activity implements OnRatingBarChangeListener {
 	public void onRatingChanged(RatingBar view, float rating, boolean fromUser) {
 		// Rating was changed
 		if(fromUser){
-			
-			
 			post.addRating(rating);
-			
 		}
 		
 		// Close activity after the rating is finished
