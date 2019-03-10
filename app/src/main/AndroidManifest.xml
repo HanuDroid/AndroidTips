@@ -1,28 +1,32 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
     package="org.varunverma.androidtips">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-	<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-	
+
+    <dist:module dist:instant="true" />
+
     <application
         android:icon="@mipmap/ic_launcher"
         android:theme="@style/AppTheme"
         android:allowBackup="true"
-        android:label="@string/app_name" >
+        android:label="@string/app_name">
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-4571712644338430~3762977902"/>
+            android:value="ca-app-pub-4571712644338430~3762977902" />
 
-        <provider android:name=".SearchSuggestionProvider"
+        <provider
+            android:name=".SearchSuggestionProvider"
             android:exported="true"
             android:permission="android.permission.INTERNET"
             android:authorities="org.varunverma.androidtips.SearchSuggestionProvider" />
 
         <activity
             android:name=".SplashScreen"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -32,19 +36,20 @@
         <activity
             android:name=".Main"
             android:configChanges="orientation|keyboardHidden"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
             <!-- enable the search dialog to send searches to SearchableActivity -->
-        	<meta-data android:name="android.app.default_searchable"
-                   android:value=".Search" />
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".Search" />
         </activity>
 
         <activity
             android:name=".Eula"
             android:configChanges="orientation|keyboardHidden"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.EULA" />
             </intent-filter>
@@ -55,27 +60,44 @@
             android:configChanges="orientation|keyboardHidden"
             android:exported="false"
             android:parentActivityName=".Main"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.INFO" />
             </intent-filter>
         </activity>
-        
-        <activity android:name=".PostRating"
+
+        <activity
+            android:name=".ShowPostFullScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:parentActivityName=".Main"
+            android:label="@string/app_name">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="apps.ayansh.com" android:pathPrefix="/Android-Tips" />
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PostRating"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@android:style/Theme.Dialog"
             android:exported="false"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.RATE" />
             </intent-filter>
         </activity>
-        
-        <activity android:name=".Search" 
+
+        <activity
+            android:name=".Search"
             android:exported="true"
             android:parentActivityName=".Main"
             android:permission="android.permission.INTERNET"
-            android:label="@string/search" >
+            android:label="@string/search">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
@@ -86,7 +108,7 @@
 
         <service
             android:name="org.varunverma.androidtips.AppGcmListenerService"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

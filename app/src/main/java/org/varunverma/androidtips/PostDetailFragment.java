@@ -99,6 +99,7 @@ public class PostDetailFragment extends Fragment implements View.OnClickListener
 
 		ImageButton waShare = rootView.findViewById(R.id.WAShare);
 		waShare.setOnClickListener(this);
+		waShare.setVisibility(View.GONE);
 
 		ImageButton Share = rootView.findViewById(R.id.Share);
 		Share.setOnClickListener(this);
@@ -132,12 +133,7 @@ public class PostDetailFragment extends Fragment implements View.OnClickListener
 
 		String html = "";
 		if(post != null){
-
-			Application app = Application.getApplicationInstance();
-			SimpleDateFormat df = new SimpleDateFormat();
-			ListIterator<String> iterator;
-			String name;
-
+			
 			html = "<HTML>" +
 					// HTML Head
 					"<head>" +
@@ -201,10 +197,8 @@ public class PostDetailFragment extends Fragment implements View.OnClickListener
 				break;
 
 			case R.id.FullScreen:
-				Intent showPost = new Intent(getActivity(), DisplayFile.class);
-				showPost.putExtra("ContentType", "Post");
-				showPost.putExtra("PostContent", getPostHTML());
-				showPost.putExtra("Title", post.getTitle());
+				Intent showPost = new Intent(getActivity(), ShowPostFullScreen.class);
+				showPost.putExtra("PostID", post.getId());
 				startActivity(showPost);
 				break;
 		}
@@ -267,7 +261,7 @@ public class PostDetailFragment extends Fragment implements View.OnClickListener
 	private void shareContent(String sharingApp){
 
 		String post_content = post.getContent(true);
-		post_content += "\n\n \uD83D\uDC49 ayansh.com/at \uD83D\uDC48";
+		post_content += "\n\n Full content: ayansh.com/at?id=" + post.getId();
 		Intent send = new Intent(Intent.ACTION_SEND);
 		send.setType("text/plain");
 		send.putExtra(Intent.EXTRA_SUBJECT, post.getTitle());

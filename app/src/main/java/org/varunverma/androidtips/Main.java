@@ -56,13 +56,22 @@ public class Main extends AppCompatActivity implements NavigationView.OnNavigati
 		app = Application.getApplicationInstance();
 		app.setContext(this);
 
+		// Load all posts, if we havent loaded before
+		if(app.getPostList().isEmpty()){
+			app.getAllPosts();
+		}
+
 		if(savedInstanceState != null){
         	postIndex = savedInstanceState.getInt("PostIndex");
         }
         else{
         	postIndex = 0;
-			// Load Posts.
-			app.getAllPosts();
+		}
+
+		// If title is provided.
+		Intent intent = getIntent();
+		if(intent != null && intent.getStringExtra("Title") != null){
+			setTitle(intent.getStringExtra("Title"));
 		}
 
 		// Start the Main Activity

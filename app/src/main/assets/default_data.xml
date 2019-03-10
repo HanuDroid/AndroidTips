@@ -4,6 +4,7 @@
         <PostData
             Id="53"
             PublishDate="2019-03-04 10:57:34"
+            PostName="screen-shots-on-your-mobile"
             Author="admin"
             ModifiedDate="2019-03-04 10:57:34"
         >
@@ -15,16 +16,19 @@ Depending on your manufacturer, the shortcuts may differ. Try one of these :<br 
 </ul><br />
 The screen shot will be taken and will be saved in your gallery.]]>
         </PostContent>
+        <PostExcerpt>
+            <![CDATA[]]>
+        </PostExcerpt>
         <PostMetaData>
             <PostMetaDataRow
                 PostId="53"
                 MetaKey="ratings_users"
-                MetaValue="1"
+                MetaValue="4"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="53"
                 MetaKey="ratings_score"
-                MetaValue="5"
+                MetaValue="20"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="53"
@@ -64,6 +68,7 @@ The screen shot will be taken and will be saved in your gallery.]]>
         <PostData
             Id="51"
             PublishDate="2019-03-04 10:51:24"
+            PostName="antivirus-for-android"
             Author="admin"
             ModifiedDate="2019-03-04 10:51:24"
         >
@@ -76,16 +81,19 @@ These antivirus apps can protect your phone from various attacks like phishing. 
 All these apps provide similar features. These apps also provide you feature to wipe your mobile data remotely in case your mobile is lost or stolen.<br /><br />
 You can download anyone as per your personal preference.]]>
         </PostContent>
+        <PostExcerpt>
+            <![CDATA[]]>
+        </PostExcerpt>
         <PostMetaData>
             <PostMetaDataRow
                 PostId="51"
                 MetaKey="ratings_users"
-                MetaValue="1"
+                MetaValue="4"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="51"
                 MetaKey="ratings_score"
-                MetaValue="5"
+                MetaValue="20"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="51"
@@ -125,6 +133,7 @@ You can download anyone as per your personal preference.]]>
         <PostData
             Id="49"
             PublishDate="2019-03-04 10:47:43"
+            PostName="power-saving-tips"
             Author="admin"
             ModifiedDate="2019-03-04 10:47:43"
         >
@@ -134,16 +143,19 @@ You can download anyone as per your personal preference.]]>
             <![CDATA[Application that rely on Internet connections, GPS, WiFi etc usually consume lot of power. When running out of power, avoid usage of following apps:<br /><ul><br /><li>Email – Needs internet connection</li><br /><li>Maps – Needs Internet and GPS</li><br /><li>Games – Consume lot of battery</li><br /><li>Browser</li><br /><li>Social networking – they perform large amounts of network calls to cache images etc.</li><br />
 </ul>]]>
         </PostContent>
+        <PostExcerpt>
+            <![CDATA[]]>
+        </PostExcerpt>
         <PostMetaData>
             <PostMetaDataRow
                 PostId="49"
                 MetaKey="ratings_users"
-                MetaValue="1"
+                MetaValue="4"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="49"
                 MetaKey="ratings_score"
-                MetaValue="5"
+                MetaValue="20"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="49"
@@ -183,6 +195,7 @@ You can download anyone as per your personal preference.]]>
         <PostData
             Id="47"
             PublishDate="2019-03-04 10:38:37"
+            PostName="url-of-hyperlinks"
             Author="admin"
             ModifiedDate="2019-03-04 10:38:37"
         >
@@ -193,16 +206,19 @@ You can download anyone as per your personal preference.]]>
 The menu will show the complete URL of the hyperlink along with other options like copy, bookmark etc.<br /><br />
 You can use this trick as a security tip while browsing.]]>
         </PostContent>
+        <PostExcerpt>
+            <![CDATA[]]>
+        </PostExcerpt>
         <PostMetaData>
             <PostMetaDataRow
                 PostId="47"
                 MetaKey="ratings_users"
-                MetaValue="1"
+                MetaValue="3"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="47"
                 MetaKey="ratings_score"
-                MetaValue="5"
+                MetaValue="15"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="47"
@@ -236,6 +252,7 @@ You can use this trick as a security tip while browsing.]]>
         <PostData
             Id="45"
             PublishDate="2019-03-04 10:36:02"
+            PostName="silence-your-phone"
             Author="admin"
             ModifiedDate="2019-03-04 10:36:02"
         >
@@ -246,16 +263,19 @@ You can use this trick as a security tip while browsing.]]>
 The phone will stop ringing and vibrating.<br /><br />
 This trick is very useful when you are in meeting or in public places.]]>
         </PostContent>
+        <PostExcerpt>
+            <![CDATA[]]>
+        </PostExcerpt>
         <PostMetaData>
             <PostMetaDataRow
                 PostId="45"
                 MetaKey="ratings_users"
-                MetaValue="1"
+                MetaValue="3"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="45"
                 MetaKey="ratings_score"
-                MetaValue="5"
+                MetaValue="15"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="45"
@@ -289,6 +309,7 @@ This trick is very useful when you are in meeting or in public places.]]>
         <PostData
             Id="33"
             PublishDate="2019-03-03 20:36:56"
+            PostName="context-menu-in-android"
             Author="admin"
             ModifiedDate="2019-03-03 20:36:56"
         >
@@ -299,16 +320,19 @@ This trick is very useful when you are in meeting or in public places.]]>
 This is similar to right mouse click on desktops which shows additional actions that can be performed on screen.<br /><br />
 For e.g. do a long press on home screen to see options like: Shortcuts, Widgets, Folders etc.]]>
         </PostContent>
+        <PostExcerpt>
+            <![CDATA[]]>
+        </PostExcerpt>
         <PostMetaData>
             <PostMetaDataRow
                 PostId="33"
                 MetaKey="ratings_users"
-                MetaValue="1"
+                MetaValue="3"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="33"
                 MetaKey="ratings_score"
-                MetaValue="5"
+                MetaValue="15"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="33"
@@ -342,6 +366,7 @@ For e.g. do a long press on home screen to see options like: Shortcuts, Widgets,
         <PostData
             Id="11"
             PublishDate="2019-03-01 22:44:20"
+            PostName="return-to-home-screen"
             Author="admin"
             ModifiedDate="2019-03-04 00:01:36"
         >
@@ -350,16 +375,19 @@ For e.g. do a long press on home screen to see options like: Shortcuts, Widgets,
         <PostContent>
             <![CDATA[At any time , if you want to return to the home screen, just press the HOME button. Depending on your phone model, you may have a hard button or a soft touch screen button.<br /><br /><strong>Note</strong>: When you return to Home, the application is not closed. Application continues to run in background and may consume memory, battery, data services.]]>
         </PostContent>
+        <PostExcerpt>
+            <![CDATA[]]>
+        </PostExcerpt>
         <PostMetaData>
             <PostMetaDataRow
                 PostId="11"
                 MetaKey="ratings_users"
-                MetaValue="1"
+                MetaValue="3"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="11"
                 MetaKey="ratings_score"
-                MetaValue="5"
+                MetaValue="15"
             ></PostMetaDataRow>
             <PostMetaDataRow
                 PostId="11"
