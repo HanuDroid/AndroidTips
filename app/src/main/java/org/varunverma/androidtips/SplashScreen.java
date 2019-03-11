@@ -74,8 +74,8 @@ public class SplashScreen extends Activity implements Invoker {
 		MobileAds.initialize(this, "ca-app-pub-4571712644338430~3762977902");
 
 		// Register application.
-		String regStatus = (String) app.getOptions().get("RegistrationStatus");
-		String regId = (String) app.getOptions().get("RegistrationId");
+		String regStatus =  (String) app.readParameterValue("RegistrationStatus");
+		String regId = (String) app.readParameterValue("RegistrationId");
 
 		if(regId == null || regId.contentEquals("")) {
 

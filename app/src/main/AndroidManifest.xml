@@ -76,7 +76,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="https" android:host="apps.ayansh.com" android:pathPrefix="/Android-Tips" />
+                <data android:scheme="https" android:host="androidtricks.app" />
                 <data android:scheme="http" />
             </intent-filter>
         </activity>

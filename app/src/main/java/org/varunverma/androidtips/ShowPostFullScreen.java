@@ -72,24 +72,24 @@ public class ShowPostFullScreen extends AppCompatActivity {
 
 			// Check what to do with this URI Data.
 			// 1. Is it the base url ?
-			if(pathSegments.size() == 1){
-				// Url is : apps.ayansh.com/Android-Tips/ --> Start Main Activity
+			if(pathSegments.size() == 0){
+				// Url is : https://androidtricks.app/ --> Start Main Activity
 				startMainActivity(title);
 			}
 
 			// Is it a Direct post link
-			if(pathSegments.size() == 2){
+			if(pathSegments.size() == 1){
 
-				String postName = pathSegments.get(1);
+				String postName = pathSegments.get(0);
 				post = app.loadPostByName(postName);
 				displayActivity();
 			}
 
 			// Is it a tag or category or may be month !
-			if(pathSegments.size() == 3){
+			if(pathSegments.size() == 2){
 
-				String part1 = pathSegments.get(1);
-				String part2 = pathSegments.get(2);
+				String part1 = pathSegments.get(0);
+				String part2 = pathSegments.get(1);
 
 				if(part1.contentEquals("category")){
 					app.loadPostByCategory(part2);
@@ -117,6 +117,7 @@ public class ShowPostFullScreen extends AppCompatActivity {
 
 					} catch (Exception e){
 						// Ignore.
+						startMainActivity(title);
 					}
 
 				}

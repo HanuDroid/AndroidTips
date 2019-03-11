@@ -4,7 +4,7 @@
     <string name="title_activity_main">Android Tips</string>
     <string name="search_hint">Search for Android Tips</string>
     <string name="search">Search Android Tips and Tricks</string>
-    <string name="BlogURL">https://apps.ayansh.com/Android-Tips</string>
+    <string name="BlogURL">https://androidtricks.app</string>
     <string name="GoogleAnalyticsPropertyId" tools:ignore="TypographyDashes">UA-34707924-2</string>
     <string name="gcm_sender_id">870453302025</string>
 
