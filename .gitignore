@@ -34,3 +34,9 @@ proguard/
 
 # Log Files
 *.log
+
+#IML Files
+*.iml
+
+#
+app/google-services.json

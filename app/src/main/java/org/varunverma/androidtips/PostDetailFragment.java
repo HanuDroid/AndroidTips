@@ -1,18 +1,13 @@
 package org.varunverma.androidtips;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.ShareCompat;
-import android.support.v4.content.FileProvider;
-import android.util.Log;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ImageButton;
@@ -20,15 +15,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.ayansh.hanudroid.Application;
-import com.ayansh.hanudroid.HanuFragmentInterface;
 import com.ayansh.hanudroid.Post;
-import com.ayansh.hanudroid.PostComment;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
-import java.io.File;
 import java.text.SimpleDateFormat;
-import java.util.Iterator;
-import java.util.ListIterator;
 import java.util.Random;
 
 public class PostDetailFragment extends Fragment implements View.OnClickListener{

@@ -1,15 +1,19 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "org.varunverma.androidtips"
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 30
         versionCode 48
         versionName "5.2.1"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -27,6 +31,8 @@ android {
 
 dependencies {
 
+    def appcompat_version = "1.2.0"
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     api project(":hanudroid")
     implementation project(":CommandExecuter")
@@ -37,13 +43,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-invites:16.0.6'
     implementation 'com.google.firebase:firebase-appindexing:17.1.0'
 
-    implementation 'com.android.support:cardview-v7:28.0.0'
-
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
-
-    implementation "com.android.support:support-compat:28.0.0"
-
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation 'androidx.core:core:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    
 }
 
 apply plugin: 'com.google.gms.google-services'
